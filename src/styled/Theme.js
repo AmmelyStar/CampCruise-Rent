@@ -1,14 +1,11 @@
 export const theme = {
   colors: {
-    white: '#ffffff',
-    black: '#2F2F2F',
-    blue: '#407BFF',
-    lightBlue: '#ECF2FF',
-    brightRed: '#EF5050',
-    skyBlue: '#9EBBFF',
-    orange: '#FF9D43',
-    paleBlue: '#D7E3FF',
-    secondText: '#8F8F8F',
+    white: '#F7F7F7',
+    black: '#101828',
+    gray: '#475467',
+    orange: '#FFC531',
+    red: '#E44848',
+    secondWhite: '#F2F4F7',
   },
 
   boxShadowBtn: {

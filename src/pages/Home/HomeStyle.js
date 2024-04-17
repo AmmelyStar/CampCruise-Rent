@@ -6,11 +6,16 @@ import bgHome from '../../img/bgHome.png';
 
 export const HomeStyle = styled.div`
   background-position: center center;
-  padding-top: 24px;
-  padding-bottom: 24px;
   background-image: url(${bgHome});
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 100vh;
 
+  @media screen and (min-width: 768px) {
+  
+  }
+
+  @media screen and (min-width: 1440px) {
+
+  }
 `;

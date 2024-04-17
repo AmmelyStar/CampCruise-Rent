@@ -8,13 +8,19 @@ import {
 import { NavLink } from 'react-router-dom';
 
 
+
+
+
+
 const Header = () => {
   return (
     <HeaderContainer>
       <LogoWrapper>
         <NavLink to="/Home">
-          <LogoText>Car-Rental</LogoText>
+     
+          <LogoText>CampCruise-Rent</LogoText>
         </NavLink>
+ 
       </LogoWrapper>
       <Navigation>
         <ul>

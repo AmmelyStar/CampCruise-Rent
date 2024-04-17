@@ -40,6 +40,7 @@ h6 {
   font-size: inherit;
 }
 html,
+
 body {
   height: 100%;
   line-height: 1;

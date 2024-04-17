@@ -1,14 +1,18 @@
 
 import styled from '@emotion/styled';
-
+import {theme} from '../../styled/Theme'
 
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background-color: ${theme.colors.red};
+ width: 335px;
+  @media screen and (min-width: ${theme.breakpoint.tablet}) {
+    width: 704px;
+  }
+
 `;
 
 export const LogoWrapper = styled.div`
@@ -16,9 +20,10 @@ export const LogoWrapper = styled.div`
 `;
 
 export const LogoText = styled.p`
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 18px;
   font-weight: bold;
-  color: #333333;
+  color: ${theme.colors.red};
   text-decoration: none;
 `;
 
@@ -36,10 +41,17 @@ export const Navigation = styled.nav`
 
   a {
     text-decoration: none;
-    color: #333333;
+    color: ${theme.colors.black};
   }
 
   a:hover {
-    color: #FF7E5F;
+    color: ${theme.colors.red};
   }
+  
 `;
+
+// export const LogoImage = styled.img`
+//   width: 100px; 
+//   height: auto; 
+
+// `;
