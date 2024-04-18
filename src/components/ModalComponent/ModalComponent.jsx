@@ -13,6 +13,9 @@ import {
   Description,
   Price,
   StarsLocation,
+  Wrap,
+  ReviewsSection,
+  Features
 } from './ModalComponent.styled';
 
 import {
@@ -31,7 +34,7 @@ import {
 
 
 
-export const CustomModal = ({ isOpen, onClose, advert }) => {
+const CustomModal = ({ isOpen, onClose, advert }) => {
   useEffect(() => {
     const handleKeyDown = event => {
       if (event.key === 'Escape') {
@@ -40,9 +43,14 @@ export const CustomModal = ({ isOpen, onClose, advert }) => {
     };
 
     if (isOpen) {
+      document.body.style.overflow = 'hidden'; // Блокируем прокрутку при открытии модального окна
       document.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.body.style.overflow = ''; // Разблокируем прокрутку при закрытии модального окна
     }
+
     return () => {
+      document.body.style.overflow = ''; // Убираем стили блокировки прокрутки при удалении компонента
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose]);
@@ -88,6 +96,10 @@ export const CustomModal = ({ isOpen, onClose, advert }) => {
               ))}
             </Image>
             <Description> {advert.description}</Description>
+            <Wrap>
+              <Features>Features</Features>
+              <ReviewsSection>Reviews</ReviewsSection>
+            </Wrap>
           </ModalContent>
         </Box>
       </ModalOverlay>

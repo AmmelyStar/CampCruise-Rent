@@ -15,29 +15,6 @@ height: 358px;
 
 `;
 
-// export const WrapperImage = styled.div`
-//   position: relative;
-//   width: 274px;
-//   height: 268px;
-//   margin-bottom: 14px;
-// `;
-
-// export const Image = styled.img`
-//   width: 100%;
-//   height: 268px;
-//   object-fit: cover;
-//   border-radius: 14px;
-// `;
-
-// export const WrapperTitle = styled.div`
-//   width: 274px;
-//   align-items: center;
-//   color: #121417;
-//   display: flex;
-//   justify-content: space-between;
-//   padding-right: 8px;
-//   margin-bottom: 8px;
-// `;
 
 export const Title = styled.div`
 display: flex;
@@ -87,8 +64,9 @@ export const RatingContainer = styled.div`
 `;
 
 export const RatingText = styled.span`
- 
+ position: relative;
   padding-top: 2px; 
+
 
   ::after {
     content: '';
@@ -97,9 +75,10 @@ export const RatingText = styled.span`
     bottom: 5px;
     display: block;
     width: 112px;
-    height: 1.7px;
+    height: 1px;
     background-color: black;
     border-radius: 3px;
+
   }
 `;
 
@@ -124,12 +103,6 @@ height: 310px;
   gap: 16px;
   
 
-
-/* border-radius: 10px;
-width: 290px;
-height: 310px;
-overflow: hidden; */
-
 `;
 
 
@@ -138,7 +111,11 @@ font-weight: 600;
 font-size: 24px;
 line-height: 125%;
 color: ${theme.colors.dark};
-/* margin-bottom: 8px; */
+ overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 360px;
+
 `;
 
 
