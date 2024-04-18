@@ -7,10 +7,10 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: ${theme.colors.red};
- width: 335px;
+  background-color: ${theme.colors.white};
+
   @media screen and (min-width: ${theme.breakpoint.tablet}) {
-    width: 704px;
+
   }
 
 `;
@@ -28,10 +28,22 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 `;
 
 export const Navigation = styled.nav`
+/* li::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+} */
   ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+        position: relative;
   }
 
   li {

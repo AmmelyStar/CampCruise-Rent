@@ -1,83 +1,178 @@
 import styled from '@emotion/styled';
+import {theme} from '../../styled/Theme'
+
 
 export const Wrapper = styled.li`
   display: flex;
-  width: 274px;
-  height: 426px;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-shrink: 0;
+  gap: 24px;
+  padding: 24px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+border-radius: 20px;
+padding: 24px;
+width: 888px;
+height: 358px;
+
+
 `;
 
-export const WrapperImage = styled.div`
+// export const WrapperImage = styled.div`
+//   position: relative;
+//   width: 274px;
+//   height: 268px;
+//   margin-bottom: 14px;
+// `;
+
+// export const Image = styled.img`
+//   width: 100%;
+//   height: 268px;
+//   object-fit: cover;
+//   border-radius: 14px;
+// `;
+
+// export const WrapperTitle = styled.div`
+//   width: 274px;
+//   align-items: center;
+//   color: #121417;
+//   display: flex;
+//   justify-content: space-between;
+//   padding-right: 8px;
+//   margin-bottom: 8px;
+// `;
+
+export const Title = styled.div`
+display: flex;
+justify-content: space-between;
+margin-bottom: 8px;
+`;
+
+export const Price = styled.div`
+
+font-weight: 600;
+font-size: 24px;
+line-height: 125%;
+color: ${theme.colors.dark};
+`;
+export const Heart = styled.div`
+  padding-top: 2px;
+`;
+
+export const PriceContainer = styled.div`
+display: flex;
+gap: 10px;
+`;
+
+export const Description = styled.p`
+ font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: ${theme.colors.gray};
+overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  width: 500px;
+`;
+
+export const Rating = styled.div`
+display: flex;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: ${theme.colors.dark};
+`;
+
+export const RatingContainer = styled.div`
+  display: flex;
+  align-items: center; 
+   margin-right: 4px;
+`;
+
+export const RatingText = styled.span`
   position: relative;
-  width: 274px;
-  height: 268px;
-  margin-bottom: 14px;
-`;
+  padding-top: 2px; 
 
-export const Image = styled.img`
-  width: 100%;
-  height: 268px;
-  object-fit: cover;
-  border-radius: 14px;
-`;
-
-export const WrapperTitle = styled.div`
-  width: 274px;
-  align-items: center;
-  color: #121417;
-  display: flex;
-  justify-content: space-between;
-  padding-right: 8px;
-  margin-bottom: 8px;
-`;
-
-export const Title = styled.h3`
-  width: 274px;
-  height: 24px;
-  overflow: hidden;
-  color: #121417;
-  font-family: 'Manrope';
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-`;
-
-export const Price = styled.p`
-  color: #121417;
-  font-family: 'Manrope';
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-`;
-
-export const Description = styled.ul`
-  color: rgba(18, 20, 23, 0.5);
-  display: flex;
-  width: 274px;
-  height: 40px;
-  overflow: hidden;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-weight: 400;
-  line-height: 1.5;
-  row-gap: 4px;
-  width: fit-content;
-  margin-bottom: 24px;
-  & > li:not(:last-child) {
-    border-right: 1px solid rgba(18, 20, 23, 0.1);
-    margin-right: 6px;
-    padding-right: 6px;
+  ::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: 5px;
+    display: block;
+    width: 112px;
+    height: 1.7px;
+    background-color: black;
+    border-radius: 3px;
   }
-  & li {
-    color: rgba(18, 20, 23, 0.5);
-    font-family: 'Manrope';
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
+`;
+
+export const Reviews = styled.span`
+ margin-left: 4px;
+  padding-top: 2px;
+
+`;
+
+export const Image = styled.div`
+img {
+    width: 80%;
+    height: 90%;
+object-fit:cover;
+    border-radius: 10px;
+  width: 290px;
+height: 310px;
+ 
+
   }
+  
+
+
+/* border-radius: 10px;
+width: 290px;
+height: 310px;
+overflow: hidden; */
+
+`;
+
+
+export const Name = styled.div`
+font-weight: 600;
+font-size: 24px;
+line-height: 125%;
+color: ${theme.colors.dark};
+`;
+
+
+
+export const Location = styled.div`
+display: flex;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: ${theme.colors.dark};
+margin-top: 4px;
+`;
+
+export const ImgLocation = styled.div`
+ margin-right: 4px;
+  padding-top: 2px;
+
+`;
+
+export const BoxLocation = styled.div`
+
+
+
+`;
+
+export const StarsLocation = styled.div`
+display: flex;
+gap: 16px;
+margin-bottom: 24px;
+
+
+
+`;
+
+export const TextContent = styled.div`
+
+
+
+
 `;

@@ -1,46 +1,97 @@
-import { useState } from 'react';
-import Buttons from '../../components/Button/Button';
-import BasicModal from 'components/Modal/Modal';
+// import { useState } from 'react';
+// import Buttons from '../../components/Button/Button';
+// import BasicModal from 'components/Modal/Modal';
+import ratingIcon from '../../img/icon/Rating.svg';
+import location from '../../img/svg/location.svg';
+import favorIcon from '../../img/svg/heart.svg';
+import Button from '../Button/Button';
+import ModalComponent from '../ModalComponent/ModalComponent';
+import React, { useState } from 'react';
 
 import {
-  Wrapper,
-  WrapperImage,
-  WrapperTitle,
+  // Wrapper,
+  // WrapperImage,
+  // WrapperTitle,
   Title,
   Price,
   Description,
+  Rating,
+  RatingText,
+  RatingContainer,
+  Image,
+  Reviews,
+  Name,
+  Location,
+  ImgLocation,
+  BoxLocation,
+  StarsLocation,
+  Wrapper,
+  TextContent,
+  Heart,
+  PriceContainer,
+
 } from './CardItemStyle';
 
 
-export default function CardItem({ data }) {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+
+
+const CardItem = ({ advert }) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
 
   return (
     <Wrapper>
-      <WrapperImage>
-     
-  
-      </WrapperImage>
-      <WrapperTitle>
+      <Image>
+        <img src={advert.gallery[0]} alt={advert.name} />
+      </Image>
+      <TextContent>
         <Title>
-          {data.make} <span style={{ color: '#3470FF' }}>{data.model}</span>,{' '}
-          {data.year}
+          <Name>{advert.name}</Name>
+          <PriceContainer>
+            <Price>
+              {' € '}
+              {advert.price.toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+                useGrouping: false,
+              })}
+            </Price>
+            <Heart>
+              <img src={favorIcon} alt={advert.name} />
+            </Heart>
+          </PriceContainer>
         </Title>
-        <Price>{data.rentalPrice}</Price>
-      </WrapperTitle>
-      <Description>
-        <li>{data.address.split(',')[1]}</li>
-        <li>{data.address.split(',')[2]}</li>
-        <li>{data.rentalCompany}</li>
-        <li>{data.type}</li>
-        <li>{data.model}</li>
-        <li>{data.mileage}</li>
-        <li>{data.accessories[0]}</li>
-      </Description>
-      <Buttons text="Learn more" onClick={handleOpen} width="274px" />
-      {open && <BasicModal open={open} onClose={handleClose} data={data} />}
+
+        <StarsLocation>
+          <Rating>
+            <RatingContainer>
+              <img src={ratingIcon} alt={advert.name} />
+            </RatingContainer>
+            <RatingText> {advert.rating}</RatingText>
+            <Reviews> ({advert.reviews.length} Reviews)</Reviews>
+          </Rating>
+          <Location>
+            <ImgLocation>
+              <img src={location} alt={advert.location} />
+            </ImgLocation>
+            <BoxLocation>{advert.location}</BoxLocation>
+          </Location>
+        </StarsLocation>
+        <Description>{advert.description}</Description>
+        <Button onClick={openModal} />
+      </TextContent>
+      {showModal && (
+        <ModalComponent
+          open={true}
+          onClose={() => setShowModal(false)}
+          advert={advert}
+        />
+      )}
     </Wrapper>
   );
-}
+};
+
+export default CardItem;

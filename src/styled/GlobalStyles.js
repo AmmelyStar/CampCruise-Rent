@@ -9,6 +9,7 @@ export const globalStyles = css`
     width: 100%;
     height: 100vh;
     margin: 0;
+   background-color: #F2F4F7;
   }
 
 *,
@@ -54,7 +55,7 @@ body {
   --primary-title-color: #131d46;
   --grey-color: #494949;
   --green-color: #09575e;
-  --darck-green-color: #064348;
+  --dark-green-color: #064348;
   --white-color: #fff;
   --bg-grey-color: #f2f2f2;
 }

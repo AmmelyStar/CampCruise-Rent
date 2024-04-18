@@ -6,7 +6,7 @@ import bgHome from '../../img/bgHome.png';
 
 export const HomeStyle = styled.div`
   background-position: center center;
-  background-image: url(${bgHome});
+  /* background-image: url(${bgHome}); */
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vh;
