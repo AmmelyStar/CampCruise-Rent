@@ -87,10 +87,10 @@ export const RatingContainer = styled.div`
 `;
 
 export const RatingText = styled.span`
-  position: relative;
+ 
   padding-top: 2px; 
 
-  ::before {
+  ::after {
     content: '';
     position: absolute;
     left: -1px;
@@ -102,6 +102,7 @@ export const RatingText = styled.span`
     border-radius: 3px;
   }
 `;
+
 
 export const Reviews = styled.span`
  margin-left: 4px;
@@ -117,9 +118,10 @@ object-fit:cover;
     border-radius: 10px;
   width: 290px;
 height: 310px;
- 
 
   }
+  display: flex;
+  gap: 16px;
   
 
 
@@ -136,6 +138,7 @@ font-weight: 600;
 font-size: 24px;
 line-height: 125%;
 color: ${theme.colors.dark};
+/* margin-bottom: 8px; */
 `;
 
 

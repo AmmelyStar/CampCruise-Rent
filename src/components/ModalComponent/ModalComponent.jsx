@@ -1,39 +1,98 @@
 import React from 'react';
-import { Modal, Box, Typography, } from '@mui/material';
+import  { useEffect } from 'react';
+import ratingIcon from '../../img/icon/Rating.svg';
+import location from '../../img/svg/location.svg';
+import close from '../../img/svg/Close.svg';
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  bgcolor: 'background.paper',
-  borderRadius: '24px',
-  boxShadow: 24,
-  width: '541px',
-  maxHeight: '90vh',
-  overflowY: 'auto',
-  p: 4,
-};
 
-const ModalComponent = ({ open, onClose, advert }) => {
+import {
+  CloseButton,
+  ModalContent,
+  ModalOverlay,
+  Box,
+  Description,
+  Price,
+  StarsLocation,
+} from './ModalComponent.styled';
+
+import {
+  Name,
+  Rating,
+  RatingContainer,
+  RatingText,
+  Reviews,
+  Location,
+  ImgLocation,
+  BoxLocation,
+
+  Image,
+  Title,
+} from '../CardItem/CardItemStyle';
+
+
+
+export const CustomModal = ({ isOpen, onClose, advert }) => {
+  useEffect(() => {
+    const handleKeyDown = event => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+    }
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
   return (
-    <Modal
-      open={open}
-      onClose={onClose}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
-    >
-      <Box sx={style}>
-        <Typography id="modal-modal-title" variant="h6" component="h2">
-          Text in a modal
-          {advert.location}
-        </Typography>
-        <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-          Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-        </Typography>
-      </Box>
-    </Modal>
+    isOpen && (
+      <ModalOverlay onClick={onClose}>
+        <Box>
+          <ModalContent onClick={e => e.stopPropagation()}>
+            <Title>
+              <Name>{advert.name}</Name>
+              <CloseButton onClick={onClose}>
+                <img src={close} alt="" />
+              </CloseButton>
+            </Title>
+
+            <StarsLocation>
+              <Rating>
+                <RatingContainer>
+                  <img src={ratingIcon} alt={advert.name} />
+                </RatingContainer>
+                <RatingText> {advert.rating}</RatingText>
+                <Reviews> ({advert.reviews.length} Reviews)</Reviews>
+              </Rating>
+              <Location>
+                <ImgLocation>
+                  <img src={location} alt={advert.location} />
+                </ImgLocation>
+                <BoxLocation>{advert.location}</BoxLocation>
+              </Location>
+            </StarsLocation>
+            <Price>
+              {' € '}
+              {advert.price.toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+                useGrouping: false,
+              })}
+            </Price>
+            <Image>
+              {advert.gallery.map((image, index) => (
+                <img key={index} src={image} alt={advert.name} />
+              ))}
+            </Image>
+            <Description> {advert.description}</Description>
+          </ModalContent>
+        </Box>
+      </ModalOverlay>
+    )
   );
 };
 
-export default ModalComponent;
+export default CustomModal;

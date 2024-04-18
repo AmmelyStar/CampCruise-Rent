@@ -5,7 +5,7 @@ import ratingIcon from '../../img/icon/Rating.svg';
 import location from '../../img/svg/location.svg';
 import favorIcon from '../../img/svg/heart.svg';
 import Button from '../Button/Button';
-import ModalComponent from '../ModalComponent/ModalComponent';
+import CustomModal from '../ModalComponent/ModalComponent';
 import React, { useState } from 'react';
 
 import {
@@ -84,8 +84,8 @@ const CardItem = ({ advert }) => {
         <Button onClick={openModal} />
       </TextContent>
       {showModal && (
-        <ModalComponent
-          open={true}
+        <CustomModal
+          isOpen={true}
           onClose={() => setShowModal(false)}
           advert={advert}
         />
