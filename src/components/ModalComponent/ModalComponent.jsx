@@ -3,6 +3,7 @@ import  { useEffect, useState } from 'react';
 import ratingIcon from '../../img/icon/Rating.svg';
 import location from '../../img/svg/location.svg';
 import close from '../../img/svg/Close.svg';
+import BookForm from '../BookForm/BookForm'
 
 
 import {
@@ -17,6 +18,7 @@ import {
   ReviewsSection,
   Features,
   // ReviewsModal
+  ContainerReviews,
 } from './ModalComponent.styled';
 
 import {
@@ -61,14 +63,14 @@ const CustomModal = ({ isOpen, onClose, advert }) => {
     };
 
     if (isOpen) {
-      document.body.style.overflow = 'hidden'; // Блокируем прокрутку при открытии модального окна
+      document.body.style.overflow = 'hidden'; 
       document.addEventListener('keydown', handleKeyDown);
     } else {
-      document.body.style.overflow = ''; // Разблокируем прокрутку при закрытии модального окна
+      document.body.style.overflow = ''; 
     }
 
     return () => {
-      document.body.style.overflow = ''; // Убираем стили блокировки прокрутки при удалении компонента
+      document.body.style.overflow = ''; 
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose]);
@@ -121,17 +123,14 @@ const CustomModal = ({ isOpen, onClose, advert }) => {
               >
                 Features
               </Features>
-              {/* <ReviewsModal> */}
-                <ReviewsSection
-                  onClick={handleReviewsClick}
-                  className={isReviewsActive ? 'active' : ''}
-                >
-                  Reviews
-                </ReviewsSection>
-              {/* </ReviewsModal> */}
+              <ReviewsSection
+                onClick={handleReviewsClick}
+                className={isReviewsActive ? 'active' : ''}
+              >
+                Reviews
+              </ReviewsSection>
               {isFeaturesActive && (
                 <div>
-                  {/* Відображення особливостей кампера */}
                   <h3>Features</h3>
                   <ul>
                     {advert.reviews.map((feature, index) => (
@@ -141,9 +140,9 @@ const CustomModal = ({ isOpen, onClose, advert }) => {
                 </div>
               )}
               {isReviewsActive && (
-                <div>
-                  {/* Відображення відгуків */}
-                  <h3>Reviews</h3>
+                <ContainerReviews>
+                  <BookForm/>
+                  <h3>Reviews111</h3>
                   <ul>
                     {advert.reviews.map((review, index) => (
                       <li key={index}>
@@ -151,7 +150,7 @@ const CustomModal = ({ isOpen, onClose, advert }) => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </ContainerReviews>
               )}
             </Wrap>
           </ModalContent>

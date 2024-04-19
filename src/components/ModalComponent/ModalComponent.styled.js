@@ -154,3 +154,8 @@ height: 532px;
 padding: 40px;
 
 `;
+
+
+export const ContainerReviews = styled.div`
+display: flex;
+`;
