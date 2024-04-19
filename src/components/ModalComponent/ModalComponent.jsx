@@ -4,6 +4,7 @@ import ratingIcon from '../../img/icon/Rating.svg';
 import location from '../../img/svg/location.svg';
 import close from '../../img/svg/Close.svg';
 import BookForm from '../BookForm/BookForm'
+import RatingStars from '../RatingStars/RatingStars'
 
 
 import {
@@ -17,8 +18,12 @@ import {
   Wrap,
   ReviewsSection,
   Features,
-  // ReviewsModal
+  Wrapper,
   ContainerReviews,
+  FeaturesContent,
+  Avatar,
+  AvaName,
+  Stars,
 } from './ModalComponent.styled';
 
 import {
@@ -129,20 +134,11 @@ const CustomModal = ({ isOpen, onClose, advert }) => {
               >
                 Reviews
               </ReviewsSection>
+            </Wrap>
+            <Wrapper>
               {isFeaturesActive && (
-                <div>
+                <FeaturesContent>
                   <h3>Features</h3>
-                  <ul>
-                    {advert.reviews.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              {isReviewsActive && (
-                <ContainerReviews>
-                  <BookForm/>
-                  <h3>Reviews111</h3>
                   <ul>
                     {advert.reviews.map((review, index) => (
                       <li key={index}>
@@ -150,9 +146,31 @@ const CustomModal = ({ isOpen, onClose, advert }) => {
                       </li>
                     ))}
                   </ul>
+                  <BookForm />
+                </FeaturesContent>
+              )}
+              {isReviewsActive && (
+                <ContainerReviews>
+                  <ul>
+                    {advert.reviews.map((review, index) => (
+                      <li key={index}>
+                        <AvaName>
+                          <Avatar>{review.reviewer_name.charAt(0)}</Avatar>
+                          <Stars>
+                            {review.reviewer_name}
+                            <RatingStars rating={review.reviewer_rating} />
+                         
+                          </Stars>
+                        </AvaName>
+
+                        {review.comment}
+                      </li>
+                    ))}
+                  </ul>
+                  <BookForm />
                 </ContainerReviews>
               )}
-            </Wrap>
+            </Wrapper>
           </ModalContent>
         </Box>
       </ModalOverlay>

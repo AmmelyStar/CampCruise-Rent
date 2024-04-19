@@ -32,7 +32,7 @@ export const ModalContent = styled.div`
 padding: 40px;
 width: 982px;
 height: 1288px;
-/* overflow-y: auto; */
+overflow-y: auto;
 `;
 
 export const CloseButton = styled.button`
@@ -78,7 +78,7 @@ export const ReviewsSection = styled.a`
 color: ${theme.colors.black};
   position: relative;
   &:hover {
-    &::after {
+    &::before {
       content: '';
       position: absolute;
       left: 0;
@@ -88,7 +88,7 @@ color: ${theme.colors.black};
       background-color: ${theme.colors.red}; 
     }
   }
-   &.active::after  {
+   &.active::before  {
     content: '';
     position: absolute;
     left: 0;
@@ -104,7 +104,7 @@ export const Features = styled.a`
     cursor: pointer;
   position: relative;
   &:hover {
-    &::after {
+    &::before {
       content: '';
       position: absolute;
       left: 0;
@@ -116,7 +116,7 @@ export const Features = styled.a`
     }
   }
 
-    &.active::after  {
+    &.active::before  {
     content: '';
     position: absolute;
     left: 0;
@@ -128,7 +128,7 @@ export const Features = styled.a`
 
 `;
 
-export const Wrap = styled.ul`
+export const Wrap = styled.div`
 display: flex;
 margin-bottom: 24px;
 gap: 40px;
@@ -145,6 +145,19 @@ gap: 40px;
     }
 `;
 
+export const Wrapper = styled.div`
+display: flex;
+margin-top: 44px;
+gap: 24px;
+
+`;
+
+export const FeaturesContent = styled.div`
+display: flex;
+
+
+`;
+
 
 export const ReviewsModal = styled.ul`
 width: 902px;
@@ -158,4 +171,42 @@ padding: 40px;
 
 export const ContainerReviews = styled.div`
 display: flex;
+`;
+
+export const Avatar = styled.div`
+border-radius: 60px;
+width: 60px;
+height: 60px;
+background-color: #F2F4F7;font-weight: 600;
+font-size: 24px;
+line-height: 125%;
+color: ${theme.colors.red}; 
+justify-content: center;
+text-align: center;
+padding: 15px;
+
+
+`;
+
+export const AvaName = styled.div`
+display: flex;
+gap: 16px;
+
+
+`;
+
+export const Stars = styled.div`
+font-weight: 600;
+font-size: 18px;
+line-height: 133%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 4px;
+width: 200px;
+
+
+
+
+
 `;

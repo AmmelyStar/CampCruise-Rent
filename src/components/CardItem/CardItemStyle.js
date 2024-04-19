@@ -91,9 +91,8 @@ export const Reviews = styled.span`
 
 export const Image = styled.div`
 img {
-    width: 80%;
-    height: 90%;
 object-fit:cover;
+object-position: center;
     border-radius: 10px;
   width: 290px;
 height: 310px;
