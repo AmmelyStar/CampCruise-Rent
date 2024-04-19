@@ -6,6 +6,20 @@ import close from '../../img/svg/Close.svg';
 import BookForm from '../BookForm/BookForm'
 import RatingStars from '../RatingStars/RatingStars'
 
+import {
+   Automatic,
+  Adults,
+  Hob,
+  Radio,
+  CD,
+  AirConditioner,
+  Beds,
+  Kitchen,
+  Petrol,
+  AC,
+}
+from '../Features/Features.styled'
+
 
 import {
   CloseButton,
@@ -24,6 +38,8 @@ import {
   Avatar,
   AvaName,
   Stars,
+  TextReviews,
+  ListReviews
 } from './ModalComponent.styled';
 
 import {
@@ -138,35 +154,37 @@ const CustomModal = ({ isOpen, onClose, advert }) => {
             <Wrapper>
               {isFeaturesActive && (
                 <FeaturesContent>
-                  <h3>Features</h3>
-                  <ul>
-                    {advert.reviews.map((review, index) => (
-                      <li key={index}>
-                        <strong>{review.author}</strong>: {review.comment}
-                      </li>
-                    ))}
-                  </ul>
+                  <Adults advert={advert.adults} />
+                  <Automatic  />
+                  <AC details={advert.details.adults} />
+                  <Petrol details={advert.details.kitchen} />
+                  <Kitchen details={advert.details.kitchen} />
+                  <Beds details={advert.details.beds} />
+                  <AirConditioner details={advert.details.airConditioner} />
+                  <CD details={advert.details.CD} />
+                  <Radio details={advert.details.radio} />
+                  <Hob details={advert.details.hob} />
+
                   <BookForm />
                 </FeaturesContent>
               )}
               {isReviewsActive && (
                 <ContainerReviews>
-                  <ul>
+                  <ListReviews>
                     {advert.reviews.map((review, index) => (
-                      <li key={index}>
+                      <TextReviews key={index}>
                         <AvaName>
                           <Avatar>{review.reviewer_name.charAt(0)}</Avatar>
                           <Stars>
                             {review.reviewer_name}
                             <RatingStars rating={review.reviewer_rating} />
-                         
                           </Stars>
                         </AvaName>
 
                         {review.comment}
-                      </li>
+                      </TextReviews>
                     ))}
-                  </ul>
+                  </ListReviews>
                   <BookForm />
                 </ContainerReviews>
               )}

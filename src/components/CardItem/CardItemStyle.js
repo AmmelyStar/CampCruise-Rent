@@ -47,6 +47,7 @@ overflow: hidden;
   white-space: nowrap; 
   text-overflow: ellipsis;
   width: 500px;
+  
 `;
 
 export const Rating = styled.div`

@@ -18,11 +18,7 @@ export const ModalOverlay = styled.div`
 export const Box = styled.div`
   top: 40px;
   display: flex;
-  position: fixed;
-
- 
-
-  
+  position: fixed;  
 `;
 
 export const ModalContent = styled.div`
@@ -31,7 +27,7 @@ export const ModalContent = styled.div`
    border-radius: 20px;
 padding: 40px;
 width: 982px;
-height: 1288px;
+max-height: 80vh;
 overflow-y: auto;
 `;
 
@@ -55,6 +51,7 @@ line-height: 150%;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+    font-family: "ABeeZee", sans-serif;
 `;
 
 export const Price = styled.div`
@@ -74,6 +71,9 @@ gap: 16px;
 `;
 
 export const ReviewsSection = styled.a`
+font-weight: 600;
+font-size: 20px;
+line-height: 120%;
    cursor: pointer;
 color: ${theme.colors.black};
   position: relative;
@@ -100,6 +100,9 @@ color: ${theme.colors.black};
 `;
 
 export const Features = styled.a`
+font-weight: 600;
+font-size: 20px;
+line-height: 120%;
  color: ${theme.colors.black};
     cursor: pointer;
   position: relative;
@@ -150,6 +153,7 @@ display: flex;
 margin-top: 44px;
 gap: 24px;
 
+
 `;
 
 export const FeaturesContent = styled.div`
@@ -171,6 +175,8 @@ padding: 40px;
 
 export const ContainerReviews = styled.div`
 display: flex;
+gap: 10px;
+
 `;
 
 export const Avatar = styled.div`
@@ -184,6 +190,7 @@ color: ${theme.colors.red};
 justify-content: center;
 text-align: center;
 padding: 15px;
+margin-bottom: 16px;
 
 
 `;
@@ -191,6 +198,7 @@ padding: 15px;
 export const AvaName = styled.div`
 display: flex;
 gap: 16px;
+
 
 
 `;
@@ -206,7 +214,19 @@ gap: 4px;
 width: 200px;
 
 
+`;
 
+export const TextReviews = styled.li`
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: #475467;
+width: 430px;
+margin-bottom: 24px;
+font-family: "ABeeZee", sans-serif;
+`;
 
+export const   ListReviews = styled.ul`
 
+width: 430px;
 `;
