@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CampCruise-Rent/static/css/main.800cee07.css",
-    "main.js": "/CampCruise-Rent/static/js/main.dbaf44cd.js",
+    "main.js": "/CampCruise-Rent/static/js/main.3b8cb67b.js",
     "static/media/bgHome.png": "/CampCruise-Rent/static/media/bgHome.9f90d07045593f9222d5.png",
     "index.html": "/CampCruise-Rent/index.html",
     "static/media/heart.svg": "/CampCruise-Rent/static/media/heart.92e7418ed48ce4449f4a22a801ee7c09.svg",
@@ -10,10 +10,10 @@
     "static/media/Rating.svg": "/CampCruise-Rent/static/media/Rating.f9946630d435f8b5f0210cfd25cad91f.svg",
     "static/media/Close.svg": "/CampCruise-Rent/static/media/Close.25dc3f46a342a188874fa545ced03ca2.svg",
     "main.800cee07.css.map": "/CampCruise-Rent/static/css/main.800cee07.css.map",
-    "main.dbaf44cd.js.map": "/CampCruise-Rent/static/js/main.dbaf44cd.js.map"
+    "main.3b8cb67b.js.map": "/CampCruise-Rent/static/js/main.3b8cb67b.js.map"
   },
   "entrypoints": [
     "static/css/main.800cee07.css",
-    "static/js/main.dbaf44cd.js"
+    "static/js/main.3b8cb67b.js"
   ]
 }
