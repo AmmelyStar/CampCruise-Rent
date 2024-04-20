@@ -50,7 +50,8 @@ const StyledDatePicker = styled(DatePicker)`
     border: none;
   }
 
- 
+
+
   & .react-datepicker-wrapper {
     & .react-datepicker__input-container {
       input {
@@ -103,6 +104,11 @@ const BookForm = () => {
     return errors;
   };
 
+   const filterDate = date => {
+     const currentDate = new Date();
+     return date >= currentDate;
+   };
+
   return (
     <>
       <BookContainer>
@@ -142,10 +148,23 @@ const BookForm = () => {
                   style={{ borderColor: errors.bookingDate ? 'red' : '' }}
                 />
               }
+              filterDate={filterDate}
+              formatWeekDay={nameOfDay => nameOfDay.substr(0, 3)}
             />
             {errors.bookingDate && (
               <span style={{ color: 'red' }}>{errors.bookingDate}</span>
             )}
+            {/* {bookingDate && bookingDate < new Date() && (
+              <span
+                style={{
+                  color: 'rgba(16, 24, 40, 0.6)',
+                  fontSize: '12px',
+                  marginTop: '4px',
+                }}
+              >
+                Please select current or future date
+              </span>
+            )} */}
           </label>
           <label>
             <InputComment
