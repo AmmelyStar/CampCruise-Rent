@@ -6,6 +6,18 @@ import close from '../../img/svg/Close.svg';
 import BookForm from '../BookForm/BookForm'
 import RatingStars from '../RatingStars/RatingStars'
 
+
+import kitchen from '../../img/svg/Vector.svg';
+import ac from '../../img/svg/ac.svg';
+import petrol from '../../img/svg/Petrol.svg';
+import beds from '../../img/svg/beds.svg';
+import air from '../../img/svg/air.svg';
+import cd from '../../img/svg/cd.svg';
+import radio from '../../img/svg/radio.svg';
+import hob from '../../img/svg/hob.svg';
+import adults from '../../img/svg/adults.svg';
+import automatic from '../../img/svg/automatic.svg';
+
 import {
    Automatic,
   Adults,
@@ -39,7 +51,19 @@ import {
   AvaName,
   Stars,
   TextReviews,
-  ListReviews
+  ListReviews,
+  FeaturesContainer,
+  VehicleDetails,
+  TitleDetails,
+  FeaturesDetails,
+  Details,
+  FormTruck,
+  LengthDetails,
+   WidthDetails,
+  HeightDetails,
+   Tank,
+   Consumption,
+
 } from './ModalComponent.styled';
 
 import {
@@ -55,6 +79,7 @@ import {
   Image,
   Title,
 } from '../CardItem/CardItemStyle';
+
 
 
 
@@ -95,6 +120,17 @@ const CustomModal = ({ isOpen, onClose, advert }) => {
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose]);
+
+
+
+  const formatData = data => {
+    if (!data) return '';
+    return (
+      data.charAt(0).toUpperCase() +
+      data.slice(1).replace(/(?<=\d)([^\d\s])/g, ' $1')
+    );
+  };
+
 
   return (
     (isOpen || isModalOpen) && (
@@ -153,20 +189,75 @@ const CustomModal = ({ isOpen, onClose, advert }) => {
             </Wrap>
             <Wrapper>
               {isFeaturesActive && (
-                <FeaturesContent>
-                  <Adults advert={advert.adults} />
-                  <Automatic  />
-                  <AC details={advert.details.adults} />
-                  <Petrol details={advert.details.kitchen} />
-                  <Kitchen details={advert.details.kitchen} />
-                  <Beds details={advert.details.beds} />
-                  <AirConditioner details={advert.details.airConditioner} />
-                  <CD details={advert.details.CD} />
-                  <Radio details={advert.details.radio} />
-                  <Hob details={advert.details.hob} />
-
+                <FeaturesContainer>
+                  <FeaturesDetails>
+                    <FeaturesContent>
+                      <Adults>
+                        <img src={adults} alt="adults" />
+                        {advert.adults} adults
+                      </Adults>
+                      <Automatic>
+                        <img src={automatic} alt="automatic" /> Automatic
+                      </Automatic>
+                      <AC>
+                        <img src={ac} alt="ac" />
+                        AC
+                      </AC>
+                      <Petrol>
+                        <img src={petrol} alt="petrol" />
+                        Petrol
+                      </Petrol>
+                      <Kitchen>
+                        <img src={kitchen} alt="kitchen" />
+                        kitchen
+                      </Kitchen>
+                      <Beds>
+                        <img src={beds} alt="beds" />
+                        {advert.details.beds} beds
+                      </Beds>
+                      <AirConditioner>
+                        <img src={air} alt="air" />
+                        {advert.details.airConditioner} air conditioner
+                      </AirConditioner>
+                      <CD>
+                        <img src={cd} alt="cd" />
+                        CD
+                      </CD>
+                      <Radio>
+                        <img src={radio} alt="radio" />
+                        Radio
+                      </Radio>
+                      <Hob>
+                        <img src={hob} alt="hob" /> {advert.details.hob} hob
+                      </Hob>
+                    </FeaturesContent>
+                    <VehicleDetails>
+                      <TitleDetails>Vehicle details</TitleDetails>
+                      <Details>
+                        <FormTruck>
+                          Form <div>{formatData(advert.form)}</div>
+                        </FormTruck>
+                        <LengthDetails>
+                          Length <div>{formatData(advert.length)}</div>
+                        </LengthDetails>
+                        <WidthDetails>
+                          Width <div>{formatData(advert.width)}</div>
+                        </WidthDetails>
+                        <HeightDetails>
+                          Height <div>{formatData(advert.height)}</div>
+                        </HeightDetails>
+                        <Tank>
+                          Tank <div>{formatData(advert.tank)}</div>
+                        </Tank>
+                        <Consumption>
+                          Consumption{' '}
+                          <div>{formatData(advert.consumption)}</div>
+                        </Consumption>
+                      </Details>
+                    </VehicleDetails>
+                  </FeaturesDetails>
                   <BookForm />
-                </FeaturesContent>
+                </FeaturesContainer>
               )}
               {isReviewsActive && (
                 <ContainerReviews>

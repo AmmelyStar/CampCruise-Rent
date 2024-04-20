@@ -144,20 +144,36 @@ gap: 40px;
       bottom: -24px; 
       width: 100%;
       height: 2px; 
-      background-color:  rgba(16, 24, 40, 0.2);; 
+      background-color:  rgba(16, 24, 40, 0.2);
+  
     }
 `;
 
 export const Wrapper = styled.div`
 display: flex;
-margin-top: 44px;
+margin-top: 64px;
 gap: 24px;
+
 
 
 `;
 
 export const FeaturesContent = styled.div`
 display: flex;
+flex-wrap: wrap;
+gap: 8px ;
+margin: 0 auto;
+height: 200px;
+width: 400px;
+
+
+`;
+
+export const FeaturesContainer = styled.div`
+display: flex;
+justify-content: space-between;
+gap: 30px;
+
 
 
 `;
@@ -166,8 +182,8 @@ display: flex;
 export const ReviewsModal = styled.ul`
 width: 902px;
 height: 532px;
- background-color: white;
-   border-radius: 20px;
+background-color: white;
+border-radius: 20px;
 padding: 40px;
 
 `;
@@ -178,6 +194,8 @@ display: flex;
 gap: 10px;
 
 `;
+
+
 
 export const Avatar = styled.div`
 border-radius: 60px;
@@ -227,6 +245,103 @@ font-family: "ABeeZee", sans-serif;
 `;
 
 export const   ListReviews = styled.ul`
-
 width: 430px;
 `;
+
+export const FeaturesDetails = styled.div`
+display: flex;
+flex-direction: column;
+gap: 44px;
+`;
+
+export const VehicleDetails = styled.div`
+display: flex;
+flex-direction: column;
+
+
+`;
+export const TitleDetails = styled.h3`
+font-weight: 600;
+font-size: 20px;
+line-height: 120%;
+position: relative;
+
+&::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -24px; 
+      width: 100%;
+      height: 2px; 
+      background-color:  rgba(16, 24, 40, 0.2);
+  
+    }
+`;
+
+export const Details = styled.div`
+display: flex;
+flex-direction: column;
+margin-top: 48px;
+gap: 14px;
+
+
+
+`;
+
+export const HeightDetails = styled.div`
+display: flex;
+font-weight: 700;
+font-size: 18px;
+line-height: 133%;
+text-align: center;
+justify-content: space-between;
+`;
+export const WidthDetails = styled.div`
+font-weight: 700;
+font-size: 18px;
+line-height: 133%;
+text-align: center;
+justify-content: space-between;
+display: flex;
+`;
+export const LengthDetails = styled.div`
+font-weight: 700;
+font-size: 18px;
+line-height: 133%;
+text-align: center;
+justify-content: space-between;
+display: flex;
+`;
+export const Tank = styled.div`
+justify-content: space-between;
+display: flex;
+font-weight: 700;
+font-size: 18px;
+line-height: 133%;
+text-align: center;
+
+`;
+export const Consumption = styled.div`
+justify-content: space-between;
+display: flex;
+font-weight: 700;
+font-size: 18px;
+line-height: 133%;
+text-align: center;
+
+`;
+
+export const  FormTruck = styled.div`
+justify-content: space-between;
+display: flex;
+font-weight: 700;
+font-size: 18px;
+line-height: 133%;
+text-align: center;
+
+`;
+
+
+
+  
+   

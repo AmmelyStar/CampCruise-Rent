@@ -3,7 +3,7 @@ import Button from 'components/Button/Button';
 import { TextButton } from './CatalogPageStyle';
 import CardItem from 'components/CardItem/CardItem';
 import { Container } from './CatalogPageStyle';
-import BookForm from 'components/BookForm/BookForm';
+
 
 
 
@@ -49,7 +49,7 @@ const CatalogPage = () => {
 
   return (
     <>
-      <BookForm />
+
       {adverts.map(advert => (
         <Container key={advert._id} className="advert">
           <CardItem advert={advert} />

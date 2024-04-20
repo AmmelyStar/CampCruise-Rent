@@ -28,12 +28,12 @@ import {
 } from './Features.styled';
 
 
-const Features = () => {
-  
+const Features = ({ advert }) => {
   return (
     <>
       <Adults>
         <img src={adults} alt="adults" />
+        advert={advert.adults}
         adults
       </Adults>
       <Automatic>
