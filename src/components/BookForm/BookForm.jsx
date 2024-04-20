@@ -137,7 +137,7 @@ const BookForm = () => {
               onChange={date => setBookingDate(date)}
               placeholderText="Booking date"
               dateFormat="dd-MM-yyyy"
-              сustomInput={
+              customInput={
                 <Input
                   style={{ borderColor: errors.bookingDate ? 'red' : '' }}
                 />
