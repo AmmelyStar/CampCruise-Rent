@@ -50,8 +50,9 @@ const StyledDatePicker = styled(DatePicker)`
     border: none;
   }
 
-  .react-datepicker-wrapper {
-    .react-datepicker__input-container {
+ 
+  & .react-datepicker-wrapper {
+    & .react-datepicker__input-container {
       input {
         background: ${theme.colors.white};
       }
@@ -60,14 +61,48 @@ const StyledDatePicker = styled(DatePicker)`
 `;
 
 const BookForm = () => {
-  const [submitted, setSubmitted] = useState(false); 
-   const [bookingDate, setBookingDate] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [bookingDate, setBookingDate] = useState(null);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [comment, setComment] = useState('');
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = event => {
     event.preventDefault();
-    setSubmitted(true); 
-     toast.success('Form send successfully!');    
+    const errors = validateForm();
+    if (Object.keys(errors).length === 0) {
+      setSubmitted(true);
+      toast.success('Form sent successfully!');
+      // Here you would typically submit the form data to your backend
+      // Reset form fields
+      setName('');
+      setEmail('');
+      setBookingDate(null);
+      setComment('');
+    } else {
+      toast.error('Please fill in all required fields correctly!');
+    }
+    setErrors(errors);
   };
+
+  const validateForm = () => {
+    const errors = {};
+    if (!name.trim()) {
+      errors.name = 'Name is required';
+    }
+    if (!email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors.email = 'Email address is invalid';
+    }
+    if (!bookingDate) {
+      errors.bookingDate = 'Booking date is required';
+    }
+   
+    return errors;
+  };
+
   return (
     <>
       <BookContainer>
@@ -75,10 +110,26 @@ const BookForm = () => {
         <SubTitle>Stay connected! We are always ready to help you.</SubTitle>
         <form onSubmit={handleSubmit}>
           <label>
-            <Input type="text" placeholder="Name" />
+            <Input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              style={{ borderColor: errors.name ? 'red' : '' }}
+            />
+            {errors.name && <span style={{ color: 'red' }}>{errors.name}</span>}
           </label>
           <label>
-            <Input type="email" placeholder="Email" />
+            <Input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              style={{ borderColor: errors.email ? 'red' : '' }}
+            />
+            {errors.email && (
+              <span style={{ color: 'red' }}>{errors.email}</span>
+            )}
           </label>
           <label>
             <StyledDatePicker
@@ -86,10 +137,26 @@ const BookForm = () => {
               onChange={date => setBookingDate(date)}
               placeholderText="Booking date"
               dateFormat="dd-MM-yyyy"
+              сustomInput={
+                <Input
+                  style={{ borderColor: errors.bookingDate ? 'red' : '' }}
+                />
+              }
             />
+            {errors.bookingDate && (
+              <span style={{ color: 'red' }}>{errors.bookingDate}</span>
+            )}
           </label>
           <label>
-            <InputComment type="text" placeholder="Comment" large last />
+            <InputComment
+              type="text"
+              placeholder="Comment"
+              large
+              last
+              value={comment}
+              onChange={e => setComment(e.target.value)}
+            />
+            {errors.comment && <span>{errors.comment}</span>}
           </label>
           <Button type="submit">Submit</Button>
         </form>
