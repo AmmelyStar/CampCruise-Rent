@@ -1,18 +1,35 @@
-
 import styled from '@emotion/styled';
-import {theme} from '../../styled/Theme'
+import { keyframes } from '@emotion/react';
+
+const moveCarAnimation = keyframes`
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(calc(100% - 40px));
+  }
+`;
 
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: ${theme.colors.white};
+  background-color: #90caf9;
+  position: relative;
+  overflow: hidden; /* Щоб стрілка не виходила за межі хедера */
 
-  @media screen and (min-width: ${theme.breakpoint.tablet}) {
-
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -40px; /* Початкова позиція машинки */
+    width: 40px;
+    height: 20px;
+    background-color: #4caf50; /* Колір машинки */
+    border-radius: 10px;
+    animation: ${moveCarAnimation} 5s linear infinite;
   }
-
 `;
 
 export const LogoWrapper = styled.div`
@@ -20,30 +37,19 @@ export const LogoWrapper = styled.div`
 `;
 
 export const LogoText = styled.p`
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 18px;
   font-weight: bold;
-  color: ${theme.colors.red};
+  color: white;
   text-decoration: none;
 `;
 
 export const Navigation = styled.nav`
-/* li::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: black;
-    border-radius: 2px;
-} */
   ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-        position: relative;
+    position: relative;
   }
 
   li {
@@ -53,17 +59,10 @@ export const Navigation = styled.nav`
 
   a {
     text-decoration: none;
-    color: ${theme.colors.black};
+    color: white;
   }
 
   a:hover {
-    color: ${theme.colors.red};
+    color: #f44336;
   }
-  
 `;
-
-// export const LogoImage = styled.img`
-//   width: 100px; 
-//   height: auto; 
-
-// `;

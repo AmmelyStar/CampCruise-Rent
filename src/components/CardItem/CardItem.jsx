@@ -1,12 +1,12 @@
-// import { useState } from 'react';
-// import Buttons from '../../components/Button/Button';
-// import BasicModal from 'components/Modal/Modal';
 import ratingIcon from '../../img/icon/Rating.svg';
 import location from '../../img/svg/location.svg';
-import favorIcon from '../../img/svg/heart.svg';
+import favorIcon from '../../img/svg/redHeard.svg';
 import Button from '../Button/Button';
-import CustomModal from '../ModalComponent/ModalComponent';
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux'; // Імпорт useDispatch та useSelector
+import { addToFavorites, removeFromFavorites } from '../../redux/actions'; // Імпорт екшенів
+import CustomModal from '../ModalComponent/ModalComponent'; // Імпорт CustomModal
+import unfavoriteIcon from '../../img/svg/heart.svg'; 
 
 import {
   // Wrapper,
@@ -37,6 +37,18 @@ import {
 
 const CardItem = ({ advert }) => {
   const [showModal, setShowModal] = useState(false);
+  const dispatch = useDispatch();
+  const favorites = useSelector(state => state.favorites);
+
+  const isFavorite = favorites.some(item => item.id === advert.id);
+
+  const toggleFavorite = () => {
+    if (isFavorite) {
+      dispatch(removeFromFavorites(advert));
+    } else {
+      dispatch(addToFavorites(advert));
+    }
+  };
 
   const openModal = () => {
     setShowModal(true);
@@ -59,8 +71,11 @@ const CardItem = ({ advert }) => {
                 useGrouping: false,
               })}
             </Price>
-            <Heart>
-              <img src={favorIcon} alt={advert.name} />
+            <Heart onClick={toggleFavorite}>
+              <img
+                src={isFavorite ? favorIcon : unfavoriteIcon}
+                alt={advert.name}
+              />
             </Heart>
           </PriceContainer>
         </Title>
