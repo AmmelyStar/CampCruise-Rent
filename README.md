@@ -1,112 +1,142 @@
-# React homework template
+[UKR](#campcruise-rent) | [EN](#campcruise-rent-english) | [DEU](#campcruise-rent-german)
 
-Цей проект був створений за допомогою
-[Create React App](https://github.com/facebook/create-react-app). Для знайомства
-і налаштування додаткових можливостей
-[звернися до документації](https://facebook.github.io/create-react-app/docs/getting-started).
+<div align="center">
+  <h1 align="center">CampCruise-Rent</h1>
 
-## Створення репозиторію за шаблоном
+<br/>
 
-Використовуй цей репозиторій організації GoIT як шаблон для створення репозиторію
-свого проєкта. Для цього натисни на кнопку `«Use this template»` і вибери опцію
-`«Create a new repository»`, як показано на зображенні.
+<div align="center">
+This application is a web platform that offers camper rental services in Ukraine. Designed for those interested in motorhome or camper travel and want to find the perfect option for their journey. The main goal is to provide users with the opportunity to familiarize themselves with various campers available for rent and conveniently manage the rental process.
+ 
+</div>
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
 
-На наступному кроці відкриється сторінка створення нового репозиторію. Заповни поле
-його імені, переконайся що репозиторій публічний, після чого натисни кнопку
-`«Create repository from template»`.
+</div>
+<br/>
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+## Features
 
-Після того як репозиторій буде створено, необхідно перейти в налаштування
-створеного репозиторію на вкладку `Settings` > `Actions` > `General` як
-показано на зображенні.
+- **Home Page:** Users can find general information about the company's services, the benefits of camper travel, and other important aspects on this page.
+- **Camper Catalog:** Here users can browse a list of available campers with different equipment. They can filter campers by various criteria such as location, equipment, and type.
+- **Favorite Listings:** On this page, users can view a list of listings they have added to their favorites. This helps conveniently track desired camper options.
+- **Camper Rental Listing Card:** Implemented according to the layout. Displays 4 listings on the first page of the catalog, and the rest are loaded by clicking the "Load more" button. Clicking the heart button adds the listing to the favorites list, changing the button color.
+- **Results Fixation** Results of user actions are fixed when the page is refreshed. The modal window with detailed information about the camper opens when the "Show more" button is clicked and closes when the "x" button, background, or Esc key is pressed.
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+## Demo
 
-Проскроливши сторінку до самого кінця, у секції `«Workflow permissions»` вибери
-опцію `«Read and write permissions»` і постав галочку в чекбоксі. Це
-необхідно для автоматизації процесу деплою проєкту.
+[(https://ammelystar.github.io/CampCruise-Rent/)]
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+## Tech Stack
 
-Тепер у тебе є особистий репозиторій проекту, зі структурою файлів і папок
-репозиторію-шаблону. Далі працюй із ним як із будь-яким іншим особистим репозиторієм,
-клонуй його собі на комп'ютер, пиши код, роби комміти і відправляй їх на
-GitHub.
+- React
+- Redux
+- Emotion
+- Axios
+- Git
+- Webpack/Babel
+- React Router
+- React PropTypes
+- SVG
 
-## Підготовка до роботи
+## Author
 
-1. Переконайся що на комп'ютері встановлено LTS-версія Node.js.
-   [Завантаж і встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Встанови базові залежності проєкту командою `npm install`.
-3. Запусти режим розробки, виконавши команду `npm start`.
-4. Перейди в браузері за адресою [http://localhost:3000](http://localhost:3000).
-   Ця сторінка буде автоматично перезавантажуватися після збереження змін у файлах проєкту.
+**Anna Radchenko**
 
-## Деплой
+</div>
 
-Продакшн версія проєкту буде автоматично проходити лінтинг, збиратися і
-деплоїтися на GitHub Pages, у гілку `gh-pages`, щоразу, коли оновлюється
-гілка `main`. Наприклад, після прямого пушу або прийнятого пул-реквесту. Для цього
-необхідно у файлі `package.json` відредагувати поле `homepage`, замінивши
-`your_username` і `your_repo_name` на свої, і відправити зміни на GitHub.
+___________________________________________________________________________________________________________________________________________________________________________________________________
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+<div align="center">
+  <h1 align="center">CampCruise-Rent</h1>
 
-Далі необхідно зайти в налаштування GitHub-репозиторію (`Settings` > `Pages`) і
-виставити роздачу продакшн-версії файлів із папки `/root` гілки `gh-pages`, якщо
-це не було зроблено автоматично.
+<br/>
 
-![GitHub Pages settings](./assets/repo-settings.png)
+<div align="center">
+Diese Anwendung ist eine Webplattform, die Wohnmobilvermietungsdienste in der Ukraine anbietet. Sie richtet sich an diejenigen, die an Wohnmobil- oder Camperreisen interessiert sind und die perfekte Option für ihre Reise finden möchten. Das Hauptziel besteht darin, Benutzern die Möglichkeit zu geben, sich mit verschiedenen verfügbaren Wohnmobilen vertraut zu machen und den Vermietungsprozess bequem zu verwalten.
+ 
+</div>
 
-### Статус деплоя
 
-Статус деплою крайнього коміту відображається іконкою біля його ідентифікатора.
+</div>
+<br/>
 
-- **Жовтий колір** - виконується збірка і деплой проєкту.
-- **Зелений колір** - деплой завершився успішно.
-- **Червоний колір** - під час лінтингу, сборки або деплою сталася помилка.
+## Funktionen
 
-Детальнішу інформацію про статус можна подивитися, клікнувши на іконку, і
-у вікні, що випадає, перейти за посиланням `Details`.
+- **Startseite:** Benutzer können allgemeine Informationen zu den Dienstleistungen des Unternehmens, den Vorteilen von Wohnmobilreisen und anderen wichtigen Aspekten auf dieser Seite finden.
+- **Wohnmobilkatalog:** Hier können Benutzer eine Liste verfügbarer Wohnmobile mit unterschiedlicher Ausstattung durchsuchen. Sie können Wohnmobile nach verschiedenen Kriterien wie Standort, Ausstattung und Typ filtern.
+- **Favorisierte Anzeigen:** Auf dieser Seite können Benutzer eine Liste der Anzeigen anzeigen, die sie zu ihren Favoriten hinzugefügt haben. Dies erleichtert das Verfolgen gewünschter Wohnmobiloptionen.
+- **Wohnmobil-Vermietungsanzeigenkarte:** Gemäß dem Layout implementiert. Zeigt 4 Anzeigen auf der ersten Seite des Katalogs an, und der Rest wird durch Klicken auf die Schaltfläche "Mehr laden" geladen. Durch Klicken auf die Herzschaltfläche wird die Anzeige der Favoritenliste hinzugefügt und die Schaltflächenfarbe geändert.
+- **Ergebnisfixierung** Die Ergebnisse der Benutzeraktionen werden beim Aktualisieren der Seite festgehalten. Das Modalfenster mit detaillierten Informationen zum Wohnmobil öffnet sich, wenn auf die Schaltfläche "Mehr anzeigen" geklickt wird, und schließt sich, wenn auf die Schaltfläche "x", den Hintergrund oder die Esc-Taste gedrückt wird.
 
-![Deployment status](./assets/deploy-status.png)
+## Demo
 
-### Жива сторінка
+[(https://ammelystar.github.io/CampCruise-Rent/)]
 
-Через якийсь час, зазвичай кілька хвилин, живу сторінку можна буде подивитися
-за адресою, вказаною у відредагованій властивості `homepage`. Наприклад, ось
-посилання на живу версію для цього репозиторію
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+## Technologie-Stack
 
-Якщо відкривається порожня сторінка, переконайся, що у вкладці `Console` немає помилок
-пов'язаних із неправильними шляхами до CSS і JS файлів проєкту (**404**). Швидше 
-за все у тебе неправильне значення властивості `homepage` у файлі `package.json`.
+- React
+- Redux
+- Emotion
+- Axios
+- Git
+- Webpack/Babel
+- React Router
+- React PropTypes
+- SVG
 
-### Маршрутизація
+## Autor
 
-Якщо додаток використовує бібліотеку `react-router-dom` для маршрутизації,
-необхідно додатково налаштувати компонент `<BrowserRouter>`, передавши у пропе
-`basename` точну назву твого репозиторію. Слеш на початку рядка обов'язковий.
+**Anna Radchenko**
 
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
+</div>
 
-## Як це працює
+__________________________________________________________________________________________________________________________________________________________________________________________________
 
-![How it works](./assets/how-it-works.png)
+<div align="center">
+  <h1 align="center">CampCruise-Rent</h1>
 
-1. Після кожного пушу в гілку `main` GitHub-репозиторія, запускається спеціальний
-   скрипт (GitHub Action) з файла `.github/workflows/deploy.yml`.
-2. Усі файли репозиторію копіюються на сервер, де проект ініціалізується і
-   проходить лінтинг і збірку перед деплоєм.
-3. Якщо всі кроки пройшли успішно, зібрана продакшн-версія файлів проєкту
-   відправляється в гілку `gh-pages`. В іншому випадку, в лозі виконання
-   скрипта буде вказано в чому проблема.
+<br/>
+
+<div align="center">
+Цей додаток - веб-платформа, що надає послуги з оренди кемперів в Україні. Призначений для тих, хто цікавиться подорожами на автодомах або кемперів і хоче знайти ідеальний варіант для своєї подорожі. Основна мета - забезпечити користувачам можливість ознайомитися з різноманітними кемперами, доступними для оренди, та зручно керувати процесом оренди.
+ 
+</div>
+
+
+</div>
+<br/>
+
+## Особливості
+
+- **Домашня сторінка:** На цій сторінці користувачі можуть дізнатися загальну інформацію про послуги компанії, переваги подорожей на кемперах та інші важливі аспекти.
+- **Каталог кемперів:** Тут користувачі можуть переглядати список доступних кемперів з різною комплектацією. Вони можуть фільтрувати кемпери за різними критеріями, такими як місце розташування, обладнання та тип.
+- **Улюблені оголошення:** На цій сторінці користувачі можуть переглядати список оголошень, які вони додали до списку улюблених. Це допомагає зручно відслідковувати потрібні варіанти кемперів.
+- **Картка оголошення про оренду кемпера:** Реалізована відповідно до макету. Відображається 4 оголошення на першій сторінці каталогу, а решта - за кліком на кнопку "Завантажити ще". Клік на кнопці "серце" додає оголошення до списку улюблених, змінюючи колір кнопки.
+- **Фіксація результатів** При оновленні сторінки фіксуються результати користувацьких дій. Модальне вікно з детальною інформацією про кемпер відкривається при кліку на кнопку "Детальніше" і закривається по кліку на "хрестик", тло або клавішу Esc.
+
+## Демо
+
+[(https://ammelystar.github.io/CampCruise-Rent/)]
+
+## Технології
+
+- React
+- Redux
+- Emotion
+- Axios
+- Git
+- Webpack/Babel
+- React Router
+- React PropTypes
+- SVG
+
+## Автор
+
+**Анна Радченко**
+
+</div>
+
+
+
+  
+
