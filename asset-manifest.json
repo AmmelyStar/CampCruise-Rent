@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CampCruise-Rent/static/css/main.800cee07.css",
-    "main.js": "/CampCruise-Rent/static/js/main.d77dc59d.js",
+    "main.js": "/CampCruise-Rent/static/js/main.d0da3dc0.js",
     "static/media/bgHome.png": "/CampCruise-Rent/static/media/bgHome.9f90d07045593f9222d5.png",
     "static/media/GitHub-Symbol1.png": "/CampCruise-Rent/static/media/GitHub-Symbol1.705e116fa980075e0cc6.png",
     "static/media/ac.svg": "/CampCruise-Rent/static/media/ac.2665460b94542f5a7163cdb0f0eb8987.svg",
@@ -16,6 +16,7 @@
     "static/media/hob.svg": "/CampCruise-Rent/static/media/hob.fdfafe8faab47407be6a8e685d8987ab.svg",
     "static/media/heart.svg": "/CampCruise-Rent/static/media/heart.92e7418ed48ce4449f4a22a801ee7c09.svg",
     "static/media/redHeard.svg": "/CampCruise-Rent/static/media/redHeard.b9a7834e44d8b869a190a5af63eab30b.svg",
+    "static/media/map-pin.svg": "/CampCruise-Rent/static/media/map-pin.c37c7145a29e190ae5173db1cb45eae9.svg",
     "static/media/calendar.svg": "/CampCruise-Rent/static/media/calendar.68a9991d536375d3a8ec81d00976176c.svg",
     "static/media/location.svg": "/CampCruise-Rent/static/media/location.16b230efebd824a26e5558d49e3d3bfc.svg",
     "static/media/cd.svg": "/CampCruise-Rent/static/media/cd.db1e4c3317c6d3212090407313f51f55.svg",
@@ -23,10 +24,10 @@
     "static/media/Vector.svg": "/CampCruise-Rent/static/media/Vector.83efc703c7c74ed8f5cacd6035bc3e71.svg",
     "static/media/Close.svg": "/CampCruise-Rent/static/media/Close.25dc3f46a342a188874fa545ced03ca2.svg",
     "main.800cee07.css.map": "/CampCruise-Rent/static/css/main.800cee07.css.map",
-    "main.d77dc59d.js.map": "/CampCruise-Rent/static/js/main.d77dc59d.js.map"
+    "main.d0da3dc0.js.map": "/CampCruise-Rent/static/js/main.d0da3dc0.js.map"
   },
   "entrypoints": [
     "static/css/main.800cee07.css",
-    "static/js/main.d77dc59d.js"
+    "static/js/main.d0da3dc0.js"
   ]
 }
