@@ -12,6 +12,7 @@ padding: 24px;
 width: 448px;
 min-height: 532px;
 background-color: white;
+text-align: start;
  & .react-datepicker__header {
     background: white;
     border-bottom: 0;
@@ -96,6 +97,7 @@ font-weight: 600;
 font-size: 20px;
 line-height: 120%;
 margin-bottom: 8px;
+text-align: start;
 `;
 
 export const SubTitle = styled.h4`
@@ -105,6 +107,7 @@ line-height: 150%;
 color: rgba(16, 24, 40, 0.2);
 margin-bottom: 24px;
 color: #475467;
+text-align: start;
 `;
 
 export const InputComment = styled.textarea`

@@ -8,10 +8,16 @@ import { addToFavorites, removeFromFavorites } from '../../redux/actions'; // І
 import CustomModal from '../ModalComponent/ModalComponent'; // Імпорт CustomModal
 import unfavoriteIcon from '../../img/svg/heart.svg'; 
 
+
+import kitchen from '../../img/svg/Vector.svg';
+import beds from '../../img/svg/beds.svg';
+import air from '../../img/svg/air.svg';
+import radio from '../../img/svg/radio.svg';
+import hob from '../../img/svg/hob.svg';
+import adults from '../../img/svg/adults.svg';
+
+
 import {
-  // Wrapper,
-  // WrapperImage,
-  // WrapperTitle,
   Title,
   Price,
   Description,
@@ -29,8 +35,19 @@ import {
   TextContent,
   Heart,
   PriceContainer,
-
+  Bubble,
 } from './CardItemStyle';
+
+import {
+  Adults,
+  Hob,
+  Radio,
+
+  AirConditioner,
+  Beds,
+  Kitchen,
+
+} from '../Features/Features.styled';
 
 
 
@@ -40,7 +57,7 @@ const CardItem = ({ advert }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(state => state.favorites);
 
-  const isFavorite = favorites.some(item => item.id === advert.id);
+  const isFavorite = favorites.some(item => item._id === advert._id);
 
   const toggleFavorite = () => {
     if (isFavorite) {
@@ -96,6 +113,34 @@ const CardItem = ({ advert }) => {
           </Location>
         </StarsLocation>
         <Description>{advert.description}</Description>
+        <Bubble>
+          <Adults>
+            <img src={adults} alt="adults" />
+            {advert.adults}
+            adults
+          </Adults>
+          <Kitchen>
+            <img src={kitchen} alt="kitchen" />
+            {advert.details.kitchen} kitchen
+          </Kitchen>
+          <Beds>
+            <img src={beds} alt="beds" />
+            {advert.details.beds} beds
+          </Beds>
+          <AirConditioner>
+            <img src={air} alt="air" />
+            {advert.details.airConditioner} air conditioner
+          </AirConditioner>
+         
+          <Radio>
+            <img src={radio} alt="radio" />
+            {advert.details.radio} Radio
+          </Radio>
+          <Hob>
+            <img src={hob} alt="hob" />
+            {advert.details.hob} hob
+          </Hob>
+        </Bubble>
         <Button onClick={openModal} />
       </TextContent>
       {showModal && (

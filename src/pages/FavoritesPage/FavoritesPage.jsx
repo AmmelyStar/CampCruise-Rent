@@ -1,6 +1,23 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromFavorites } from '../../redux/actions';
+import favorIcon from '../../img/svg/redHeard.svg';
+import { Link } from 'react-router-dom'; 
+import Footer from 'components/Footer/Footer';
+
+import {
+  Container,
+  ImgBox,
+  Title,
+  Wrapper,
+  Button,
+  Text,
+  TextBtn,
+} from './FavoritesPageStyle';
+import CardItem from 'components/CardItem/CardItem';
+
+
+
 
 const Favorite = () => {
   const favorites = useSelector(state => state.favorites);
@@ -11,21 +28,36 @@ const Favorite = () => {
   };
 
   return (
-    <div>
-      <h2>Favorite</h2>
-      {favorites.length > 0 ? (
-        <ul>
-          {favorites.map(advert => (
-            <li key={advert.id}>
-              {advert.name}
-              <button onClick={() => removeFavorite(advert)}>Remove</button>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No favorites yet</p>
-      )}
-    </div>
+    <>
+      <Container>
+        <Title>
+          Yours Favorites
+          <ImgBox>
+            <img src={favorIcon} alt="heart" />
+          </ImgBox>
+        </Title>
+
+        {favorites.length > 0 ? (
+          <Wrapper>
+            {favorites.map(advert => (
+              <CardItem key={advert._id} advert={advert}>
+                <button onClick={() => removeFavorite(advert)}>Remove</button>
+              </CardItem>
+            ))}
+          </Wrapper>
+        ) : (
+          <div>
+            <Text>No favorites yet</Text>
+            <Button>
+              <Link to="/catalog">
+                <TextBtn>Add favorites</TextBtn>
+              </Link>
+            </Button>
+          </div>
+        )}
+      </Container>
+      <Footer/>
+    </>
   );
 };
 

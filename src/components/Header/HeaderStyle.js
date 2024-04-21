@@ -1,44 +1,28 @@
 import styled from '@emotion/styled';
-import { keyframes } from '@emotion/react';
-
-const moveCarAnimation = keyframes`
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(calc(100% - 40px));
-  }
-`;
+import { theme } from '../../styled/Theme';
 
 export const HeaderContainer = styled.div`
+  background-color: ${theme.colors.red};
+  padding: 20px;
+  text-align: center;
+  color: ${theme.colors.white};
+  font-size: 24px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background-color: #90caf9;
-  position: relative;
-  overflow: hidden; /* Щоб стрілка не виходила за межі хедера */
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -40px; /* Початкова позиція машинки */
-    width: 40px;
-    height: 20px;
-    background-color: #4caf50; /* Колір машинки */
-    border-radius: 10px;
-    animation: ${moveCarAnimation} 5s linear infinite;
-  }
 `;
 
 export const LogoWrapper = styled.div`
   margin-right: 20px;
+  display: flex;
+  gap: 16px;
 `;
 
-export const LogoText = styled.p`
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 18px;
+export const Cont = styled.div`
+  display: flex;
+`;
+
+export const LogoText = styled.div`
+  font-size: 24px;
   font-weight: bold;
   color: white;
   text-decoration: none;
@@ -59,10 +43,14 @@ export const Navigation = styled.nav`
 
   a {
     text-decoration: none;
-    color: white;
+    color: ${theme.colors.white};
   }
 
   a:hover {
-    color: #f44336;
+    color: black;
+  }
+
+  .active {
+    color: black;
   }
 `;

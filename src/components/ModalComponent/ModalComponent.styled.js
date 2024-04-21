@@ -51,7 +51,8 @@ line-height: 150%;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-    font-family: "ABeeZee", sans-serif;
+  font-family: "ABeeZee", sans-serif;
+  text-align: start;
 `;
 
 export const Price = styled.div`
@@ -74,6 +75,7 @@ export const ReviewsSection = styled.a`
 font-weight: 600;
 font-size: 20px;
 line-height: 120%;
+
    cursor: pointer;
 color: ${theme.colors.black};
   position: relative;
@@ -242,6 +244,7 @@ color: #475467;
 width: 430px;
 margin-bottom: 24px;
 font-family: "ABeeZee", sans-serif;
+text-align: start;
 `;
 
 export const   ListReviews = styled.ul`
@@ -265,6 +268,7 @@ font-weight: 600;
 font-size: 20px;
 line-height: 120%;
 position: relative;
+text-align: start;
 
 &::after {
       content: '';

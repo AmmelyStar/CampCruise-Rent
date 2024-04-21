@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import {theme} from '../../styled/Theme'
 
 
-export const Wrapper = styled.li`
+export const Wrapper = styled.div`
   display: flex;
   gap: 24px;
   padding: 24px;
@@ -11,7 +11,8 @@ border-radius: 20px;
 padding: 24px;
 width: 888px;
 height: 358px;
-
+background-color: white;
+text-align: start;
 
 `;
 
@@ -153,6 +154,18 @@ margin-bottom: 24px;
 export const TextContent = styled.div`
 
 
+
+
+`;
+
+export const Bubble = styled.div`
+/* padding-top: 16px;
+padding-bottom: 16px; */
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-bottom: 22px;
+margin-top: 24px;
 
 
 `;

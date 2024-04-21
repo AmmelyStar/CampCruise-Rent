@@ -38,7 +38,7 @@ export const Kitchen = styled.div`
 background-color: #F2F4F7;
 border-radius: 100px;
 padding: 12px 18px;
-width: 121px;
+width: 124px;
 height: 44px;
 color: black;
 font-weight: 500;
@@ -86,7 +86,7 @@ export const Radio = styled.div`
 background-color: #F2F4F7;
 border-radius: 100px;
 padding: 12px 18px;
-width: 108px;
+width: 120px;
 height: 44px;
 color: black;
 font-weight: 500;
@@ -102,7 +102,7 @@ export const CD = styled.div`
 background-color: #F2F4F7;
 border-radius: 100px;
 padding: 12px 18px;
-width: 88px;
+width: 120px;
 height: 44px;
 color: black;
 font-weight: 500;

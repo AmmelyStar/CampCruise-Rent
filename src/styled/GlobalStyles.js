@@ -9,7 +9,7 @@ export const globalStyles = css`
     width: 100%;
     height: 100vh;
     margin: 0;
-   background-color: #F2F4F7;
+   background-color: white;
   }
 
 *,
@@ -45,9 +45,7 @@ html,
 body {
   height: 100%;
   line-height: 1;
-  background: var(--bg-grey-color);
   font-size: 14px;
-  color: var(--primary-title-color);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }

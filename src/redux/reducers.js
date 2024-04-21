@@ -1,24 +1,20 @@
-import { ADD_TO_FAVORITES, REMOVE_FROM_FAVORITES } from '../redux/actions';
+import { combineReducers } from 'redux';
+import { ADD_TO_FAVORITES, REMOVE_FROM_FAVORITES } from './actions';
 
-const initialState = {
-  favorites: [],
-};
-
-const reducer = (state = initialState, action) => {
+const favoritesReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_TO_FAVORITES:
-      return {
-        ...state,
-        favorites: [...state.favorites, action.payload],
-      };
-    case REMOVE_FROM_FAVORITES: // Додано обробку нового типу дії
-      return {
-        ...state,
-        favorites: state.favorites.filter(advert => advert.id !== action.payload.id),
-      };
+      return [...state, action.payload];
+    case REMOVE_FROM_FAVORITES:
+      return state.filter(advert => advert._id !== action.payload._id);
     default:
       return state;
   }
 };
 
-export default reducer;
+const rootReducer = combineReducers({
+  favorites: favoritesReducer,
+  // other reducers if any
+});
+
+export default rootReducer;
