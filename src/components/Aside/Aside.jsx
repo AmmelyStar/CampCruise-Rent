@@ -3,10 +3,12 @@ import {
   List,
   Item,
   ButtonText,
-  Buttonstyled,
-  FirstStyledsvg,
+  Btn,
+
 } from './Aside.styled';
-import svg from '../../img/icons.svg';
+import svg1 from '../../img/svg/1.svg';
+import svg2 from '../../img/svg/2.png';
+import svg3 from '../../img/svg/3.png';
 
 const Aside = () => {
   return (
@@ -14,28 +16,28 @@ const Aside = () => {
       <Title>Vehicle type</Title>
       <List>
         <Item>
-          <Buttonstyled>
-            <FirstStyledsvg>
-              <use href={`${svg}#icon-van3`}></use>
-            </FirstStyledsvg>
+          <Btn>
+  
+              <img src={svg1} alt="heart" />
+   
             <ButtonText>Van</ButtonText>
-          </Buttonstyled>
+          </Btn>
         </Item>
         <Item>
-          <Buttonstyled>
-            <FirstStyledsvg>
-              <use href={`${svg}#icon-van1`}></use>
-            </FirstStyledsvg>
+          <Btn>
+     
+              <img src={svg2} alt="heart" />
+      
             <ButtonText>Fully Integrated</ButtonText>
-          </Buttonstyled>
+          </Btn>
         </Item>
         <Item>
-          <Buttonstyled>
-            <FirstStyledsvg>
-              <use href={`${svg}#icon-van2`}></use>
-            </FirstStyledsvg>
+          <Btn>
+     
+              <img src={svg3} alt="heart" />
+     
             <ButtonText>Alcove</ButtonText>
-          </Buttonstyled>
+          </Btn>
         </Item>
       </List>
     </>

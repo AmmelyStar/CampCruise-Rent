@@ -30,8 +30,6 @@ export const Wrapper = styled.div`
   gap: 16px;
   flex-direction: column;
   align-items: center; 
-  max-height: 100vh; 
-   flex-grow: 1;
 
 `;
 
@@ -42,6 +40,7 @@ line-height: 150%;
 letter-spacing: -0.01em; 
 color: ${theme.colors.black};
 margin-bottom: 20px;
+
 `;
 
 

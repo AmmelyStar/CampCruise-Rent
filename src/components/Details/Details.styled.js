@@ -1,3 +1,4 @@
+
 import styled from '@emotion/styled';
 import { theme } from '../../styled/Theme';
 
@@ -17,12 +18,12 @@ export const Title = styled.h2`
     display: block;
     width: 100%;
     height: 1px;
-    background-color: rgba(16, 24, 40, 0.2);
+    background-color: ${theme.colors.black};
   }
 `;
 export const List = styled.ul`
   padding-top: 48px;
-  padding-bottom: 64px;
+  padding-bottom: 32px;
   max-width: 360px;
   justify-content: flex-start;
   align-items: center;
@@ -37,7 +38,7 @@ export const Item = styled.li`
   width: 114px;
   height: 95px;
   border-radius: 10px;
-  border: 1px solid rgba(16, 24, 40, 0.2);
+  border: 1px solid ${theme.colors.black};
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -52,7 +53,20 @@ export const Item = styled.li`
   }
 `;
 
-
+export const Styledsvg = styled.svg`
+  width: 32px;
+  height: 32px;
+  fill: transparent;
+  background-color: ${theme.colors.white};
+  stroke: ${theme.colors.black};
+`;
+export const FirstStyledsvg = styled.svg`
+  width: 32px;
+  height: 32px;
+  fill: ${theme.colors.black};
+  background-color: ${theme.colors.white};
+  stroke: ${theme.colors.black};
+`;
 
 export const ButtonText = styled.p`
   font-weight: 600;
@@ -60,10 +74,9 @@ export const ButtonText = styled.p`
   line-height: 20px;
   text-align: center;
   color: ${theme.colors.black};
-  background-color: white;
 `;
 
-export const Btn = styled.button`
+export const Buttonstyled = styled.button`
   text-decoration: none;
-
+  background-color: ${theme.colors.white};
 `;

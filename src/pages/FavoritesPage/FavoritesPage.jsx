@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { removeFromFavorites } from '../../redux/actions';
 import favorIcon from '../../img/svg/redHeard.svg';
 import { Link } from 'react-router-dom'; 
-import Footer from 'components/Footer/Footer';
+
 
 import {
   Container,
@@ -56,7 +56,7 @@ const Favorite = () => {
           </div>
         )}
       </Container>
-      <Footer/>
+
     </>
   );
 };

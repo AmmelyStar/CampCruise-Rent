@@ -2,7 +2,15 @@ import React, { useState, useEffect } from 'react';
 import ButtonMore from 'components/Button/ButtonMore';
 import { TextButton } from './CatalogPageStyle';
 import CardItem from 'components/CardItem/CardItem';
-import { Container, Wrapper, Wrap } from './CatalogPageStyle';
+import {
+  Container,
+  Wrapper,
+  Wrap,
+
+} from './CatalogPageStyle';
+// import Aside from 'components/Aside/Aside';
+// import { Details } from 'components/ModalComponent/ModalComponent.styled';
+// import Location from 'components/Location/Location';
 
 const PAGE_SIZE = 4;
 
@@ -50,6 +58,12 @@ const CatalogPage = () => {
 
   return (
     <Wrapper>
+      {/* <aside>
+        <Location />
+        <Details />
+        <Aside />
+      </aside> */}
+
       {adverts.map(advert => (
         <Container key={advert._id} className="advert">
           <CardItem advert={advert} />

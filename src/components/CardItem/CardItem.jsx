@@ -3,9 +3,9 @@ import location from '../../img/svg/location.svg';
 import favorIcon from '../../img/svg/redHeard.svg';
 import Button from '../Button/Button';
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux'; // Імпорт useDispatch та useSelector
-import { addToFavorites, removeFromFavorites } from '../../redux/actions'; // Імпорт екшенів
-import CustomModal from '../ModalComponent/ModalComponent'; // Імпорт CustomModal
+import { useDispatch, useSelector } from 'react-redux'; 
+import { addToFavorites, removeFromFavorites } from '../../redux/actions'; 
+import CustomModal from '../ModalComponent/ModalComponent'; 
 import unfavoriteIcon from '../../img/svg/heart.svg'; 
 
 

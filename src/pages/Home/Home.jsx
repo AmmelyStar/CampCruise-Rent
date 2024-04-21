@@ -1,15 +1,25 @@
 import React from 'react';
-import {HomeStyle} from './HomeStyle'
+
+// import bg from '../../img/bgHome1.png'
+import bg from '../../img/bgHome.png';
+
+
+import {
+  HomeStyle,
+
+}
+from './HomeStyle'
+
 
 
 const Home = () => {
   return (
-    <HomeStyle>
-      home
-       
- 
+    <>
+      <HomeStyle>
+        <img src={bg} alt="" />
+      </HomeStyle>
 
-    </HomeStyle>
+    </>
   );
 };
 
