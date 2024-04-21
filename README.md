@@ -1,4 +1,4 @@
-[Українська](#campcruise-rent) | [Англійська](#campcruise-rent-english) | [Німецька](#campcruise-rent-german)
+[UKR](#campcruise-rent) | [EN](#campcruise-rent-english) | [DEU](#campcruise-rent-german)
 
 <div align="center">
   <h1 align="center">CampCruise-Rent</h1>
