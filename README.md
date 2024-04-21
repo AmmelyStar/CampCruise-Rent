@@ -24,7 +24,7 @@ This application is a web platform that offers camper rental services in Ukraine
 
 ## Demo
 
-[(https://ammelystar.github.io/CampCruise-Rent/)]
+<img src='/src/img/localhost.jpeg'>
 
 ## Tech Stack
 
