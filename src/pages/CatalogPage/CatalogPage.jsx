@@ -57,24 +57,27 @@ const CatalogPage = () => {
   }
 
   return (
-    <Wrapper>
-      {/* <aside>
+    <>
+      <Wrapper>
+        {/* <aside>
         <Location />
         <Details />
         <Aside />
       </aside> */}
 
-      {adverts.map(advert => (
-        <Container key={advert._id} className="advert">
-          <CardItem advert={advert} />
-        </Container>
-      ))}
-      <Wrap>
-        <ButtonMore type="button" onClick={loadMore}>
-          <TextButton>Load more</TextButton>
-        </ButtonMore>
-      </Wrap>
-    </Wrapper>
+        {adverts.map(advert => (
+          <Container key={advert._id} className="advert">
+            <CardItem advert={advert} />
+          </Container>
+        ))}
+        <Wrap>
+          <ButtonMore type="button" onClick={loadMore}>
+            <TextButton>Load more</TextButton>
+          </ButtonMore>
+        </Wrap>
+      
+      </Wrapper>
+    </>
   );
 };
 
