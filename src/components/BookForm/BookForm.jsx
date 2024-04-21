@@ -100,17 +100,35 @@ const BookForm = () => {
     if (!bookingDate) {
       errors.bookingDate = 'Booking date is required';
     }
-   
+
     return errors;
   };
 
-   const filterDate = date => {
-     const currentDate = new Date();
-     return date >= currentDate;
-   };
+//  const filterDate = date => {
+//    const currentDate = new Date();
+//    const selectedDate = new Date(date);
+//    return (
+//      selectedDate >= currentDate || date.getDate() === currentDate.getDate()
+//    );
+  //  };
+  
+  const filterDate = date => {
+    const currentDate = new Date();
+    return date.setHours(0, 0, 0, 0) >= currentDate.setHours(0, 0, 0, 0);
+  };
+
+  const isToday = someDate => {
+    const today = new Date();
+    return (
+      someDate.getDate() === today.getDate() &&
+      someDate.getMonth() === today.getMonth() &&
+      someDate.getFullYear() === today.getFullYear()
+    );
+  };
 
   return (
     <>
+      <ToastContainer />
       <BookContainer>
         <Title>Book your campervan now</Title>
         <SubTitle>Stay connected! We are always ready to help you.</SubTitle>
@@ -140,7 +158,13 @@ const BookForm = () => {
           <label>
             <StyledDatePicker
               selected={bookingDate}
-              onChange={date => setBookingDate(date)}
+              onChange={date => {
+                if (date < new Date() && !isToday(date)) {
+                  toast.error('Please select current or future date');
+                } else {
+                  setBookingDate(date);
+                }
+              }}
               placeholderText="Booking date"
               dateFormat="dd-MM-yyyy"
               customInput={
@@ -154,17 +178,6 @@ const BookForm = () => {
             {errors.bookingDate && (
               <span style={{ color: 'red' }}>{errors.bookingDate}</span>
             )}
-            {/* {bookingDate && bookingDate < new Date() && (
-              <span
-                style={{
-                  color: 'rgba(16, 24, 40, 0.6)',
-                  fontSize: '12px',
-                  marginTop: '4px',
-                }}
-              >
-                Please select current or future date
-              </span>
-            )} */}
           </label>
           <label>
             <InputComment
@@ -180,7 +193,6 @@ const BookForm = () => {
           <Button type="submit">Submit</Button>
         </form>
       </BookContainer>
-      <ToastContainer />
     </>
   );
 };
