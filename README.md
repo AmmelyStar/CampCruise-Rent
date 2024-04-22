@@ -24,7 +24,9 @@ This application is a web platform that offers camper rental services in Ukraine
 
 ## Demo
 
-<img src='src/img/localhost.jpeg'>
+<img src='src/img/home.png'>
+<img src='src/img/Catalog.png'>
+<img src='src/img/Favorites.png'>
 
 ## Tech Stack
 
