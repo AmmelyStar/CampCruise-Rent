@@ -9,7 +9,7 @@
 This application is a web platform that offers camper rental services in Ukraine. Designed for those interested in motorhome or camper travel and want to find the perfect option for their journey. The main goal is to provide users with the opportunity to familiarize themselves with various campers available for rent and conveniently manage the rental process.
  
 </div>
-
+<img src='src/img/Catalog.png'>
 
 </div>
 <br/>
@@ -25,7 +25,6 @@ This application is a web platform that offers camper rental services in Ukraine
 ## Demo
 
 <img src='src/img/home.png'>
-<img src='src/img/Catalog.png'>
 <img src='src/img/Favorites.png'>
 
 ## Tech Stack
