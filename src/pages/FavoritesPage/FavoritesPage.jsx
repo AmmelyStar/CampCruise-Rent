@@ -19,6 +19,7 @@ import CardItem from 'components/CardItem/CardItem';
 
 
 
+
 const Favorite = () => {
   const favorites = useSelector(state => state.favorites);
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ const Favorite = () => {
   return (
     <>
       <Container>
+
         <Title>
           Yours Favorites
           <ImgBox>

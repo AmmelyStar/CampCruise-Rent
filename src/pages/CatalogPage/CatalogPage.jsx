@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import ButtonMore from 'components/Button/ButtonMore';
 import { TextButton } from './CatalogPageStyle';
-import CardItem from 'components/CardItem/CardItem';
-import Footer from 'components/Footer/Footer';
+import CardItem from '../../components/CardItem/CardItem';
+
 import {
   Container,
   Wrapper,
   Wrap,
+  Cont
 
 } from './CatalogPageStyle';
-// import Aside from 'components/Aside/Aside';
-// import { Details } from 'components/ModalComponent/ModalComponent.styled';
-// import Location from 'components/Location/Location';
+import Aside from 'components/Aside/Aside';
+
 
 const PAGE_SIZE = 4;
 
@@ -60,25 +60,23 @@ const CatalogPage = () => {
   return (
     <>
       <Wrapper>
-        {/* <aside>
-        <Location />
-        <Details />
-        <Aside />
-      </aside> */}
-
-        {adverts.map(advert => (
-          <Container key={advert._id} className="advert">
-            <CardItem advert={advert} />
-          </Container>
-        ))}
-        <Wrap>
-          <ButtonMore type="button" onClick={loadMore}>
-            <TextButton>Load more</TextButton>
-          </ButtonMore>
-        </Wrap>
-      
+        <Cont>
+          <Aside />
+        </Cont>
+        <div>
+          {adverts.map(advert => (
+            <Container key={advert._id} className="advert">
+              <CardItem advert={advert} />
+            </Container>
+          ))}
+          <Wrap>
+            <ButtonMore type="button" onClick={loadMore}>
+              <TextButton>Load more</TextButton>
+            </ButtonMore>
+          </Wrap>
+        </div>
       </Wrapper>
-      <Footer/>
+ 
     </>
   );
 };
