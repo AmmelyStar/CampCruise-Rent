@@ -1,6 +1,6 @@
 [УКР](#campcruise-rent) | [EN](#campcruise-rent-english) | [DEU](#campcruise-rent-german)
 
-<div align="center">
+<div align="center" id="campcruise-rent-english">
   <h1 align="center">CampCruise-Rent</h1>
 
 <br/>
@@ -48,7 +48,7 @@ This application is a web platform that offers camper rental services in Ukraine
 
 ___________________________________________________________________________________________________________________________________________________________________________________________________
 
-<div align="center">
+<div align="center" id="campcruise-rent-german">
   <h1 align="center">CampCruise-Rent</h1>
 
 <br/>
@@ -96,7 +96,7 @@ Diese Anwendung ist eine Webplattform, die Wohnmobilvermietungsdienste in der Uk
 
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
-<div align="center">
+<div align="center" id="campcruise-rent">
   <h1 align="center">CampCruise-Rent</h1>
 
 <br/>
