@@ -2,7 +2,8 @@ import styled from '@emotion/styled';
 import { theme } from '../../styled/Theme';
 
 export const HeaderContainer = styled.div`
-  background-color: ${theme.colors.red};
+  background-color: ${theme.colors.red} ;
+  opacity: 0.8;
   padding: 20px;
   text-align: center;
   color: ${theme.colors.white};

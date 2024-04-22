@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ButtonMore from 'components/Button/ButtonMore';
 import { TextButton } from './CatalogPageStyle';
 import CardItem from 'components/CardItem/CardItem';
+import Footer from 'components/Footer/Footer';
 import {
   Container,
   Wrapper,
@@ -77,6 +78,7 @@ const CatalogPage = () => {
         </Wrap>
       
       </Wrapper>
+      <Footer/>
     </>
   );
 };

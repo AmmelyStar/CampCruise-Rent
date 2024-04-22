@@ -6,6 +6,7 @@ import {theme} from '../../styled/Theme'
 
 export const FooterContainer = styled.footer`
   background-color: ${theme.colors.red};
+    opacity: 0.8;
   padding: 20px;
   position: fixed;
   bottom: 0;
