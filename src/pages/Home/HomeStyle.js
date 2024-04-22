@@ -16,7 +16,7 @@ export const Title = styled.div`
   line-height: 125%;
   margin-bottom: 60px;
  text-align: center;
-  border: 2px solid #ccc;
+  border: 1px solid rgba(16, 24, 40, 0.2);
   padding: 20px;
    background-color: ${theme.colors.red};
     opacity: 0.8;
@@ -49,7 +49,7 @@ gap: 10px;
 
 
 export const Wrap = styled.div`
-  border: 2px solid #ccc;
+  border: 1px solid rgba(16, 24, 40, 0.2);
   padding: 20px;
    background-color: ${theme.colors.red};
     opacity: 0.8;
@@ -85,7 +85,7 @@ export const Deko = styled.div`
   margin-bottom: 20px;
   color: black;
   text-align: start;
-  border: 2px solid #ccc;
+  border: 1px solid rgba(16, 24, 40, 0.2);
   padding: 20px;
    background-color: ${theme.colors.red};
     opacity: 0.8;
