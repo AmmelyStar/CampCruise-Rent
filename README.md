@@ -57,7 +57,8 @@ ________________________________________________________________________________
 Diese Anwendung ist eine Webplattform, die Wohnmobilvermietungsdienste in der Ukraine anbietet. Sie richtet sich an diejenigen, die an Wohnmobil- oder Camperreisen interessiert sind und die perfekte Option für ihre Reise finden möchten. Das Hauptziel besteht darin, Benutzern die Möglichkeit zu geben, sich mit verschiedenen verfügbaren Wohnmobilen vertraut zu machen und den Vermietungsprozess bequem zu verwalten.
  
 </div>
-
+<br/>
+<img src='src/img/Catalog.png'>
 
 </div>
 <br/>
@@ -72,7 +73,8 @@ Diese Anwendung ist eine Webplattform, die Wohnmobilvermietungsdienste in der Uk
 
 ## Demo
 
-[(https://ammelystar.github.io/CampCruise-Rent/)]
+<img src='src/img/home.png'>
+<img src='src/img/Favorites.png'>
 
 ## Technologie-Stack
 
@@ -103,7 +105,8 @@ ________________________________________________________________________________
 Цей додаток - веб-платформа, що надає послуги з оренди кемперів в Україні. Призначений для тих, хто цікавиться подорожами на автодомах або кемперів і хоче знайти ідеальний варіант для своєї подорожі. Основна мета - забезпечити користувачам можливість ознайомитися з різноманітними кемперами, доступними для оренди, та зручно керувати процесом оренди.
  
 </div>
-
+<br/>
+<img src='src/img/Catalog.png'>
 
 </div>
 <br/>
@@ -118,7 +121,8 @@ ________________________________________________________________________________
 
 ## Демо
 
-[(https://ammelystar.github.io/CampCruise-Rent/)]
+<img src='src/img/home.png'>
+<img src='src/img/Favorites.png'>
 
 ## Технології
 
