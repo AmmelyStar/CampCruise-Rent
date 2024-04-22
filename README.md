@@ -1,4 +1,4 @@
-[УКР](#campcruise-rent) | [EN](#campcruise-rent-english) | [DEU](#campcruise-rent-german)
+[УКР](#campcruise-rent-ukr) | [EN](#campcruise-rent-english) | [DEU](#campcruise-rent-german)
 
 <div align="center" id="campcruise-rent-english">
   <h1 align="center">CampCruise-Rent</h1>
@@ -96,7 +96,7 @@ Diese Anwendung ist eine Webplattform, die Wohnmobilvermietungsdienste in der Uk
 
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
-<div align="center" id="campcruise-rent">
+<div align="center" id="campcruise-rent-ukr">
   <h1 align="center">CampCruise-Rent</h1>
 
 <br/>
