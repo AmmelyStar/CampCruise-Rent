@@ -1,11 +1,9 @@
-import React from 'react';
-import  { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ratingIcon from '../../img/icon/Rating.svg';
 import location from '../../img/svg/location.svg';
 import close from '../../img/svg/Close.svg';
-import BookForm from '../BookForm/BookForm'
-import RatingStars from '../RatingStars/RatingStars'
-
+import BookForm from '../BookForm/BookForm';
+import RatingStars from '../RatingStars/RatingStars';
 
 import kitchen from '../../img/svg/Vector.svg';
 import ac from '../../img/svg/ac.svg';
@@ -19,7 +17,7 @@ import adults from '../../img/svg/adults.svg';
 import automatic from '../../img/svg/automatic.svg';
 
 import {
-   Automatic,
+  Automatic,
   Adults,
   Hob,
   Radio,
@@ -29,9 +27,7 @@ import {
   Kitchen,
   Petrol,
   AC,
-}
-from '../Features/Features.styled'
-
+} from '../Features/Features.styled';
 
 import {
   CloseButton,
@@ -59,11 +55,10 @@ import {
   Details,
   FormTruck,
   LengthDetails,
-   WidthDetails,
+  WidthDetails,
   HeightDetails,
-   Tank,
-   Consumption,
-
+  Tank,
+  Consumption,
 } from './ModalComponent.styled';
 
 import {
@@ -75,29 +70,24 @@ import {
   Location,
   ImgLocation,
   BoxLocation,
-
   Image,
   Title,
 } from '../CardItem/CardItemStyle';
 
-
-
-
 const CustomModal = ({ isOpen, onClose, advert }) => {
-
-  const [isFeaturesActive, setIsFeaturesActive] = useState(false);
+  const [isFeaturesActive, setIsFeaturesActive] = useState(true); // Set to true by default
   const [isReviewsActive, setIsReviewsActive] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleFeaturesClick = () => {
-    setIsFeaturesActive(!isFeaturesActive);
-    setIsReviewsActive(false); 
+    setIsFeaturesActive(true);
+    setIsReviewsActive(false);
     setIsModalOpen(true);
   };
 
   const handleReviewsClick = () => {
-    setIsReviewsActive(!isReviewsActive);
-    setIsFeaturesActive(false); 
+    setIsReviewsActive(true);
+    setIsFeaturesActive(false);
     setIsModalOpen(true);
   };
 
@@ -109,19 +99,17 @@ const CustomModal = ({ isOpen, onClose, advert }) => {
     };
 
     if (isOpen) {
-      document.body.style.overflow = 'hidden'; 
+      document.body.style.overflow = 'hidden';
       document.addEventListener('keydown', handleKeyDown);
     } else {
-      document.body.style.overflow = ''; 
+      document.body.style.overflow = '';
     }
 
     return () => {
-      document.body.style.overflow = ''; 
+      document.body.style.overflow = '';
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose]);
-
-
 
   const formatData = data => {
     if (!data) return '';
@@ -130,7 +118,6 @@ const CustomModal = ({ isOpen, onClose, advert }) => {
       data.slice(1).replace(/(?<=\d)([^\d\s])/g, ' $1')
     );
   };
-
 
   return (
     (isOpen || isModalOpen) && (

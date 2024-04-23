@@ -3,15 +3,9 @@ import ButtonMore from 'components/Button/ButtonMore';
 import { TextButton } from './CatalogPageStyle';
 import CardItem from '../../components/CardItem/CardItem';
 
-import {
-  Container,
-  Wrapper,
-  Wrap,
-  Cont
-
-} from './CatalogPageStyle';
+import { Container, Wrapper, Wrap, Cont } from './CatalogPageStyle';
 import Aside from 'components/Aside/Aside';
-
+import { Loader } from 'components/Loader/Loader';
 
 const PAGE_SIZE = 4;
 
@@ -20,6 +14,7 @@ const CatalogPage = () => {
   const [adverts, setAdverts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [hasMore, setHasMore] = useState(true);
 
   useEffect(() => {
     const fetchAdverts = async () => {
@@ -35,6 +30,10 @@ const CatalogPage = () => {
         setAdverts(prevAdverts =>
           page === 1 ? [...data] : [...prevAdverts, ...data]
         );
+
+        // Check if there are more adverts to load
+        setHasMore(data.length === PAGE_SIZE);
+
         setLoading(false);
       } catch (error) {
         setError(error.message);
@@ -50,7 +49,7 @@ const CatalogPage = () => {
   };
 
   if (loading && page === 1) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   if (error) {
@@ -69,14 +68,15 @@ const CatalogPage = () => {
               <CardItem advert={advert} />
             </Container>
           ))}
-          <Wrap>
-            <ButtonMore type="button" onClick={loadMore}>
-              <TextButton>Load more</TextButton>
-            </ButtonMore>
-          </Wrap>
+          {hasMore && (
+            <Wrap>
+              <ButtonMore type="button" onClick={loadMore}>
+                <TextButton>Load more</TextButton>
+              </ButtonMore>
+            </Wrap>
+          )}
         </div>
       </Wrapper>
- 
     </>
   );
 };

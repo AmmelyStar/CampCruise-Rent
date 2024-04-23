@@ -32,6 +32,7 @@ color: ${theme.colors.dark};
 `;
 export const Heart = styled.div`
   padding-top: 2px;
+  cursor: pointer;
 `;
 
 export const PriceContainer = styled.div`
