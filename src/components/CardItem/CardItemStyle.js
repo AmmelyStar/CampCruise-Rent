@@ -52,7 +52,8 @@ export const Heart = styled.div`
   padding-top: 2px;
   cursor: pointer;
   @media screen {min-width: 834px and (max-width: 1439px);
-  padding-top: 0;
+  bottom: 6px;
+  position: relative;
 
     
   }

@@ -11,6 +11,13 @@ export const Container = styled.div`
   padding-bottom: 80px;
   margin-top: 10px;
   margin-bottom: 140px;
+   @media screen {min-width: 834px and (max-width: 1439px);
+  padding-top: 20px;
+  padding-bottom: 50px;
+  margin-top: 10px;
+  margin-bottom: 0;
+    
+  }
 `;
 
 
@@ -19,10 +26,22 @@ export const Title = styled.h2`
   font-size: 28px;
   line-height: 120%;
   margin-bottom: 40px;
+    @media screen {min-width: 834px and (max-width: 1439px);
+    margin-bottom: 26px;
+     font-size: 20px;
+  line-height: 100%;
+
+    
+  }
 `;
 
 export const ImgBox = styled.span`
   margin-left: 8px;
+    @media screen {min-width: 834px and (max-width: 1439px);
+top: 6px;
+position: relative;
+    
+  }
 `;
 
 export const Wrapper = styled.div`
