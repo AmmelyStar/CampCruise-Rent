@@ -41,7 +41,7 @@ const AsideFilter = () => {
             <input type="checkbox" name="answer" value="automatic" />
             <CheckboxWrap>
               <svg>
-                <use href={`${svg}#icon-ac`} />
+                <use href={`${svg}#icon-transm`} />
               </svg>
               <span>Automatic</span>
             </CheckboxWrap>
@@ -75,7 +75,7 @@ const AsideFilter = () => {
           </label>
         </FormFilter>
 
-        <TitleList>Vehicle equipment</TitleList>
+        <TitleList>Vehicle type</TitleList>
 
         <FormFilterRadio>
           <label>

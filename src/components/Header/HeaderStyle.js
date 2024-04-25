@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { theme } from '../../styled/Theme';
 
 export const HeaderContainer = styled.div`
+
   background-color: ${theme.colors.red} ;
   opacity: 0.8;
   padding: 20px;
@@ -10,6 +11,9 @@ export const HeaderContainer = styled.div`
   font-size: 24px;
   display: flex;
   justify-content: space-between;
+    @media screen {min-width: 834px and (max-width: 1439px);
+    width: 834px;
+  }
 `;
 
 export const LogoWrapper = styled.div`

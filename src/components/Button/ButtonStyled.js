@@ -7,6 +7,14 @@ width: 173px;
 height: 56px;
 color: ${theme.colors.white};
 background-color: ${theme.colors.red};
+@media screen {min-width: 834px and (max-width: 1439px);
+padding: 10px 20px;
+width: 113px;
+height: 26px;
+padding-bottom: 26px;
+
+    
+  }
   cursor: pointer;
 
   &:hover {

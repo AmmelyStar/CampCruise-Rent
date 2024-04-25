@@ -3,9 +3,10 @@ import ButtonMore from 'components/Button/ButtonMore';
 import { TextButton } from './CatalogPageStyle';
 import CardItem from '../../components/CardItem/CardItem';
 
-import { Container, Wrapper, Wrap, Cont } from './CatalogPageStyle';
+import { Container, Wrapper, Wrap, Cont, Card } from './CatalogPageStyle';
 import Aside from 'components/Aside/Aside';
 import { Loader } from 'components/Loader/Loader';
+
 
 const PAGE_SIZE = 4;
 
@@ -62,7 +63,7 @@ const CatalogPage = () => {
         <Cont>
           <Aside />
         </Cont>
-        <div>
+        <Card>
           {adverts.map(advert => (
             <Container key={advert._id} className="advert">
               <CardItem advert={advert} />
@@ -75,7 +76,7 @@ const CatalogPage = () => {
               </ButtonMore>
             </Wrap>
           )}
-        </div>
+        </Card>
       </Wrapper>
     </>
   );

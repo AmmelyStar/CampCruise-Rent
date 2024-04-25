@@ -3,6 +3,10 @@ import { theme } from '../../styled/Theme';
 
 export const HomeStyle = styled.div`
   position: relative;
+  @media screen {min-width: 834px and (max-width: 1439px);
+    width: 834px;
+    
+  }
 `;
 
 export const ImageOverlay = styled.div`

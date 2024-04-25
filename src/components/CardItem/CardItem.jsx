@@ -116,8 +116,7 @@ const CardItem = ({ advert }) => {
         <Bubble>
           <Adults>
             <img src={adults} alt="adults" />
-            {advert.adults}
-            adults
+            {advert.adults} adults
           </Adults>
           <Kitchen>
             <img src={kitchen} alt="kitchen" />
