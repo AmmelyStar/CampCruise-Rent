@@ -8,9 +8,14 @@ export const FooterContainer = styled.footer`
   background-color: ${theme.colors.red};
     opacity: 0.8;
   padding: 20px;
-  position: fixed;
-  bottom: 0;
+  /* position: fixed; 
+   bottom: 0; */
   width: 100%;
+    @media screen {min-width: 834px and (max-width: 1439px);
+    width: 834px;
+ 
+    
+  }
   
 
 `;

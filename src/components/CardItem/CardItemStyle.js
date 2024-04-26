@@ -40,7 +40,7 @@ export const Price = styled.div`
 font-weight: 600;
 font-size: 24px;
 line-height: 125%;
-color: ${theme.colors.dark};
+color: black;
 @media screen {min-width: 834px and (max-width: 1439px);
    font-weight: 600;
 font-size: 18px;
@@ -77,6 +77,8 @@ overflow: hidden;
   white-space: nowrap; 
   text-overflow: ellipsis;
   width: 500px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   @media screen {min-width: 834px and (max-width: 1439px);
  font-weight: 400;
 font-size: 14px;
@@ -168,7 +170,7 @@ export const Name = styled.div`
 font-weight: 600;
 font-size: 24px;
 line-height: 125%;
-color: ${theme.colors.dark};
+color: black;
  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -218,10 +220,10 @@ export const BoxLocation = styled.div`
 export const StarsLocation = styled.div`
 display: flex;
 gap: 16px;
-margin-bottom: 24px;
+/* margin-bottom: 24px; */
    @media screen {min-width: 834px and (max-width: 1439px);
 gap: 10px;
-margin-bottom: 16px;
+/* margin-bottom: 16px; */
   }
 
 
@@ -243,8 +245,8 @@ margin-top: 24px;
   @media screen {min-width: 834px and (max-width: 1439px);
 
 gap: 6px;
-margin-bottom: 8px;
-margin-top: 12px;
+margin-bottom: 10px;
+margin-top: 8px;
   }
 
 

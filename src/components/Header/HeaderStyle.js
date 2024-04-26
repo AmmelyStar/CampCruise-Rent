@@ -2,7 +2,20 @@ import styled from '@emotion/styled';
 import { theme } from '../../styled/Theme';
 
 export const HeaderContainer = styled.div`
-
+  width: 100%;
+@media screen {min-width: 375px and (max-width: 833px);
+    width: 375px;
+     background-color: ${theme.colors.red} ;
+  opacity: 0.8;
+  padding: 20px;
+  text-align: center;
+  color: ${theme.colors.white};
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  }
+   @media screen {min-width: 1440px;
+    width: 1440px;
   background-color: ${theme.colors.red} ;
   opacity: 0.8;
   padding: 20px;
@@ -11,8 +24,10 @@ export const HeaderContainer = styled.div`
   font-size: 24px;
   display: flex;
   justify-content: space-between;
+    }
     @media screen {min-width: 834px and (max-width: 1439px);
     width: 834px;
+      /* font-size: 20px; */
   }
 `;
 
@@ -59,3 +74,4 @@ export const Navigation = styled.nav`
     color: black;
   }
 `;
+
