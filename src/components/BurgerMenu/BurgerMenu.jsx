@@ -1,30 +1,47 @@
-import React from 'react';
-import { slide as Menu } from 'react-burger-menu';
+import {
+  StyledMenu,
+  ItemList,
+  ItemMenu,
+  Logo,
+  LogoText,
+  LogoWrap,
+  Overlay,
+} from './BurgerMenu.styled';
+import van from '../../img/svg/Van.svg';
+import close from '../../img/close.svg';
+import { NavLink } from 'react-router-dom';
 
-class BurgerMenu extends React.Component {
-  showSettings(event) {
-    event.preventDefault();
-    alert('Settings clicked'); // For demonstration purposes, you can replace this with your actual settings functionality
-  }
+export default function BurgerMenu({ onClose }) {
 
-  render() {
-    return (
-      <Menu>
-        <a id="home" className="menu-item" href="/">
-          Home
-        </a>
-        <a id="about" className="menu-item" href="/about">
-          About
-        </a>
-        <a id="contact" className="menu-item" href="/contact">
-          Contact
-        </a>
-        <a onClick={this.showSettings} className="menu-item--small" href="">
-          Settings
-        </a>
-      </Menu>
-    );
-  }
+  return (
+    <>
+      <Overlay onClick={onClose} />
+      <StyledMenu>
+        <Logo>
+          <LogoWrap>
+            <LogoText>CampCruise-Rent</LogoText>
+            <img src={van} alt="van" width={40} />
+          </LogoWrap>
+          <img src={close} alt="" onClick={onClose} />
+        </Logo>
+        <ItemList>
+          <ItemMenu>
+            <NavLink to="/Home" onClick={onClose}>
+              Home
+            </NavLink>
+          </ItemMenu>
+          <ItemMenu>
+            <NavLink to="/Catalog" onClick={onClose}>
+              Catalog
+            </NavLink>
+          </ItemMenu>
+          <ItemMenu>
+            <NavLink to="/Favorites" onClick={onClose}>
+              Favorites
+            </NavLink>
+          </ItemMenu>
+        </ItemList>
+      </StyledMenu>
+    </>
+  );
 }
-
-export default BurgerMenu;
