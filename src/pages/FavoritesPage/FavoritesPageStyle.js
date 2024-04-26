@@ -38,7 +38,7 @@ export const Title = styled.h2`
 export const ImgBox = styled.span`
   margin-left: 8px;
     @media screen {min-width: 834px and (max-width: 1439px);
-top: 6px;
+bottom: 2px;
 position: relative;
     
   }

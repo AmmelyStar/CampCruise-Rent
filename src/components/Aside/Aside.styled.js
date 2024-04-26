@@ -108,7 +108,7 @@ export const Button = styled.button`
      font-size: 14px;
   line-height: 18px;
     width: 130px;
-  height: 44px;
+  height: 40px;
   padding: 12px 20px;
   }
   &:hover {
