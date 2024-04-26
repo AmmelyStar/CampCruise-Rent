@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin-bottom: 16px;
   justify-content: center;
   margin-right: 80px;
-    @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
   margin-right: 0;
    margin-top: 10px;
   margin-bottom: 10px;
@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
 padding-top: 80px;
 padding-bottom: 80px;
   margin: 0 auto;
-   @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
     width: 834px;
     padding: 20px;
   gap: 10px;
@@ -45,7 +45,7 @@ export const Wrap = styled.div`
     display: flex;
   margin-top: 40px;
   padding-bottom: 70px;
- @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
   padding-bottom: 40px;
     margin-top: 20px;
     
@@ -63,7 +63,7 @@ export const TextButton = styled.span`
   font-weight: 500;
 font-size: 16px;
 line-height: 150%;
- @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
 
 font-size: 14px;
 line-height: 120%;
@@ -74,7 +74,7 @@ line-height: 120%;
 export const Cont = styled.div`
   display: flex;
 margin-right: 80px;
- @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
 margin-top: 9px;
 margin-right: 0;
     

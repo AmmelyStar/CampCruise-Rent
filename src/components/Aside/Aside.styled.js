@@ -4,7 +4,7 @@ export const AsideContainer = styled.aside`
   padding-left: 64px;
   width: 420px;
   text-align: start;
-    @media screen {min-width: 834px and (max-width: 1439px);
+    @media screen and (min-width: 834px) and (max-width: 1439px){
      width: 230px; 
      padding-left: 0;
 
@@ -27,7 +27,7 @@ text-align: start;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
-      @media screen {min-width: 834px and (max-width: 1439px);
+      @media screen and (min-width: 834px) and (max-width: 1439px){
       font-size: 14px;
         line-height: 18px;
   }
@@ -44,7 +44,7 @@ text-align: start;
     padding-left: 44px;
     padding-bottom:18px;
     padding-top:18px;
-      @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
     width: 200px;
 
 
@@ -72,7 +72,7 @@ export const TitlePage = styled.h5`
   letter-spacing: 0%;
   text-align: left;
   margin-bottom: 14px;
-    @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
       font-size: 14px;
         line-height: 18px;
   }
@@ -86,7 +86,7 @@ export const TitleList = styled.h6`
   letter-spacing: 0%;
   text-align: left;
   margin-bottom: 24px;
-    @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
       font-size: 18px;
         line-height: 18px;
   }
@@ -104,7 +104,7 @@ export const Button = styled.button`
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.5%;
-    @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
      font-size: 14px;
   line-height: 18px;
     width: 130px;
@@ -124,7 +124,7 @@ export const FormFilter = styled.form`
   margin-top: 24px;
   margin-bottom: 32px;
   padding-top: 24px;
-   @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
 
   width: 190px;
     
@@ -146,7 +146,7 @@ export const CheckboxWrap = styled.div`
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 10px;
   cursor: pointer;
-    @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
    gap: 6px;
   width: 90px;
   height: 80px;
@@ -163,7 +163,7 @@ export const CheckboxWrap = styled.div`
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
-        @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
  font-size: 12px;
 
     line-height: 16px;
@@ -177,7 +177,7 @@ export const CheckboxWrap = styled.div`
     fill: transparent;
     stroke: #101828;
   }
- @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
 
 
     
@@ -196,7 +196,7 @@ export const FormFilterRadio = styled.form`
     position: absolute;
   }
 
-    @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
   flex-wrap: wrap;
     width: 190px;
 
@@ -214,7 +214,7 @@ export const RadioWrap = styled.div`
   height: 95px;
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 10px;
-    @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
    gap: 6px;
   width: 90px;
   height: 80px;
@@ -234,7 +234,7 @@ export const RadioWrap = styled.div`
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
-      @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
  font-size: 12px;
 
     line-height: 16px;

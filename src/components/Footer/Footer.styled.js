@@ -11,8 +11,9 @@ export const FooterContainer = styled.footer`
   /* position: fixed; 
    bottom: 0; */
   width: 100%;
-    @media screen {min-width: 834px and (max-width: 1439px);
-    width: 834px;
+  margin-top: 40px;
+  @media screen and (min-width: 834px) and (max-width: 1439px){
+
  
     
   }

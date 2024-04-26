@@ -4,12 +4,12 @@ import { theme } from '../../styled/Theme';
 
 export const StyledMenu = styled.div`
   background-color: ${theme.colors.white};
-  width: 375px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  /* justify-content: center; */
+  /* text-align: center; */
   margin: 0 auto;
   position: absolute;
   z-index: 999;
@@ -24,9 +24,9 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 999;
-  overflow: hidden
+  overflow: hidden;
 
 `;
 
@@ -39,6 +39,7 @@ justify-content: center;
 gap: 30px;
 padding: 30px;
 margin: 0 auto;
+margin-top: 80px;
 color: ${theme.colors.red};
 
 `;
@@ -60,7 +61,7 @@ a {
 `;
 export const Logo = styled.div`
 display: flex;
-width: 375px;
+  width: 100%;
 background: ${theme.colors.red};
 padding: 10px;
 padding-left: 14px;

@@ -12,7 +12,7 @@ font-family: Inter;
   width: 160px;
   color: ${theme.colors.gray};
 
-  @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
  
 
     
@@ -37,7 +37,7 @@ background-color: ${theme.colors.red};
   justify-content: center;
   margin: 0 auto;
 
-@media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
 /* padding: 10px 20px; */
 width: 113px;
 height: 26px;

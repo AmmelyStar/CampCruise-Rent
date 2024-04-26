@@ -13,7 +13,7 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   visibility: ${props => (props.isHidden ? 'hidden' : 'visible')}; // змінено тут
 
-  @media screen and (min-width: 375px) and (max-width: 833px) {
+  /* @media screen and (min-width: 375px) and (max-width: 833px) {
     width: 375px;
   }
 
@@ -23,7 +23,7 @@ export const HeaderContainer = styled.div`
 
   @media screen and (min-width: 1440px) {
     width: 1440px;
-  }
+  } */
 `;
 
 

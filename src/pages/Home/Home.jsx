@@ -15,24 +15,13 @@ const Home = () => {
   return (
     <>
       <HomeStyle>
-        <img src={bg} alt="" width={834} />
+        <img src={bg} alt=""  />
         <Title>Welcome to CampCruise-Rent!</Title>
         <Wrap>
           <CardHome title="Satisfied Customers:" content="1000+" />
           <CardHome title="Repeat Bookings:" content="70%" />
           <CardHome title="Camping Routes Available: " content="20+" />
         </Wrap>
-
-        {/* <ImageOverlay>
-          <img src={bg} alt="" width={1440} height={950} />
-         
-          <Text>
-          
-              We are delighted to welcome you to our website, where you can find
-              everything you need for a comfortable and exciting outdoor
-              adventure.         
-          </Text>
-        </ImageOverlay> */}
       </HomeStyle>
       <Footer />
     </>

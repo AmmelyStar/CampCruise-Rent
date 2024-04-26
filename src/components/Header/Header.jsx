@@ -12,7 +12,7 @@ import {
 import { NavLink } from 'react-router-dom';
 import van from '../../img/svg/Van.svg';
 import BurgerMenu from 'components/BurgerMenu/BurgerMenu';
-import menu from '../../img/menu.png';
+import menu from '../../img/menu.svg';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);

@@ -8,7 +8,7 @@ height: 56px;
 border: 1px solid rgba(71, 84, 103, 0.2);
 background-color: transparent;
   cursor: pointer;
-   @media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
 padding: 10px 22px;
 width: 126px;
 height: 36px;
