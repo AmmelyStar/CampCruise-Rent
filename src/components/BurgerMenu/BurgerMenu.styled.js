@@ -39,18 +39,19 @@ justify-content: center;
 gap: 30px;
 padding: 30px;
 margin: 0 auto;
-margin-top: 80px;
+margin-top: 140px;
 color: ${theme.colors.red};
 
 `;
 
 export const ItemMenu = styled.li`
-font-size: 26px;
-  font-weight: 500;
+font-size: 32px;
+  font-weight: 700;
   line-height: 100%;
 a {
   color: ${theme.colors.red};
   text-decoration: none;
+  
   }
    a:hover,
    a:focus,
@@ -63,7 +64,8 @@ export const Logo = styled.div`
 display: flex;
   width: 100%;
 background: ${theme.colors.red};
-padding: 10px;
+opacity: 0.8;
+padding: 29px;
 padding-left: 14px;
 text-align: center;
 justify-content: space-between;
@@ -75,7 +77,7 @@ top: 0;
 
 
 export const LogoText = styled.div`
-font-size: 26px;
+font-size: 24px;
   font-weight: 600;
   line-height: 100%;
 color: white;

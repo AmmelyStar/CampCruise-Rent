@@ -13,17 +13,6 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   visibility: ${props => (props.isHidden ? 'hidden' : 'visible')}; // змінено тут
 
-  /* @media screen and (min-width: 375px) and (max-width: 833px) {
-    width: 375px;
-  }
-
-  @media screen and (min-width: 834px) {
-    width: 834px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    width: 1440px;
-  } */
 `;
 
 
@@ -40,21 +29,12 @@ export const LogoWrapper = styled.div`
 export const Cont = styled.div`
   display: flex;
 
+ 
 `;
 export const Container = styled.div`
 display: flex;
 
-  /* @media screen and (min-width: 375px) and (max-width: 833px) {
-    width: 375px;
-  }
 
-  @media screen and (min-width: 834px) {
-    display: none;
-  }
-
-  @media screen and (min-width: 1440px) {
-    display: none;
-  } */
 
 `;
 
@@ -64,8 +44,16 @@ export const LogoText = styled.div`
   color: white;
   text-decoration: none;
   @media screen and (min-width: 375px) and (max-width: 833px) {
-      font-size: 22px;
-      margin-top: 8px;
+      font-size: 24px;
+      margin-top: 16px;
+  }
+   @media screen and (min-width: 834px) {
+
+      margin-top: 2px;
+  }
+    @media screen and (min-width: 1440px) {
+  font-size: 32px;
+    
   }
 `;
 
@@ -88,6 +76,11 @@ export const Navigation = styled.nav`
   li {
     display: inline;
     margin-right: 20px;
+     @media screen and (min-width: 1440px)  {
+   font-size: 32px;
+       margin-right: 36px;
+  }
+ 
   }
 
   a {

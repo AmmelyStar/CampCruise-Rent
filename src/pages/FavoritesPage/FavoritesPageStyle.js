@@ -26,10 +26,11 @@ export const Title = styled.h2`
   font-size: 28px;
   line-height: 120%;
   margin-bottom: 40px;
-    @media screen and (min-width: 834px) and (max-width: 1439px){
-    margin-bottom: 26px;
-     font-size: 20px;
-  line-height: 100%;
+      @media screen and (min-width: 1440px) {
+position: relative;
+  font-size: 32px;
+  line-height: 130%;
+  margin-bottom: 40px;
 
     
   }
@@ -37,10 +38,12 @@ export const Title = styled.h2`
 
 export const ImgBox = styled.span`
   margin-left: 8px;
-  @media screen and (min-width: 834px) and (max-width: 1439px){
-bottom: 2px;
+  position: relative;
+  top: 8px;
+ 
+   @media screen and (min-width: 1440px) {
 position: relative;
-    
+top: 14px;
   }
 `;
 
