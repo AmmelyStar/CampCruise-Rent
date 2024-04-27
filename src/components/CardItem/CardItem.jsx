@@ -36,13 +36,13 @@ import {
   Heart,
   PriceContainer,
   Bubble,
+  BtnWrap,
 } from './CardItemStyle';
 
 import {
   Adults,
   Hob,
   Radio,
-
   AirConditioner,
   Beds,
   Kitchen,
@@ -126,21 +126,23 @@ const CardItem = ({ advert }) => {
             <img src={beds} alt="beds" />
             {advert.details.beds} beds
           </Beds>
-          <AirConditioner>
-            <img src={air} alt="air" />
-            {advert.details.airConditioner} air conditioner
-          </AirConditioner>
-         
+
           <Radio>
             <img src={radio} alt="radio" />
-            {advert.details.radio} Radio
+            {advert.details.radio} radio
           </Radio>
           <Hob>
             <img src={hob} alt="hob" />
             {advert.details.hob} hob
           </Hob>
+          <AirConditioner>
+            <img src={air} alt="air" />
+            {advert.details.airConditioner} air conditioner
+          </AirConditioner>
         </Bubble>
-        <Button onClick={openModal} />
+        <BtnWrap>
+          <Button onClick={openModal} />
+        </BtnWrap>
       </TextContent>
       {showModal && (
         <CustomModal

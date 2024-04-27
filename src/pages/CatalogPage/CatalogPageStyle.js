@@ -8,11 +8,17 @@ export const Container = styled.div`
  margin-top: 16px;
   margin-bottom: 16px;
   justify-content: center;
-  margin-right: 80px;
+
   @media screen and (min-width: 834px) and (max-width: 1439px){
   margin-right: 0;
    margin-top: 10px;
   margin-bottom: 10px;
+    
+  }
+    @media screen and (min-width: 1440px) {
+  margin-right: 0;
+ margin-top: 16px;
+  margin-bottom: 16px;
     
   }
 
@@ -50,6 +56,7 @@ export const Wrap = styled.div`
     margin-top: 20px;
     
   }
+ 
 
 
 `;

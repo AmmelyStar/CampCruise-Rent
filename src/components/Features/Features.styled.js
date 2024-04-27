@@ -15,7 +15,7 @@ line-height: 125%;
 text-align: center;
 gap: 8px;
 display: flex;
-@media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
 gap: 6px;
 font-size: 14px;
 line-height: 100%;
@@ -65,7 +65,7 @@ line-height: 125%;
 text-align: center;
 gap: 8px;
 display: flex;
-@media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
 gap: 6px;
 font-size: 14px;
 line-height: 100%;
@@ -74,6 +74,10 @@ height: 34px;
 padding: 10px 14px;
     
   }
+   /* @media screen and (min-width: 1440px) {
+    width: 290px;
+height: 310px;
+  } */
 
   
 `;
@@ -90,7 +94,7 @@ line-height: 125%;
 text-align: center;
 gap: 8px;
 display: flex;
-@media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
 gap: 6px;
 font-size: 14px;
 line-height: 100%;
@@ -105,8 +109,8 @@ padding: 9px 14px;
 export const AirConditioner = styled.div`
 background-color: #F2F4F7;
 border-radius: 100px;
-padding: 12px 18px;
-width: 187px;
+padding: 12px 16px;
+width: 176px;
 height: 44px;
 color: black;
 font-weight: 500;
@@ -115,7 +119,19 @@ line-height: 125%;
 text-align: center;
 gap: 8px;
 display: flex;
-@media screen {min-width: 834px and (max-width: 1439px);
+/* display: none; */
+  @media screen and (min-width: 834px) and (max-width: 1439px){
+    display: flex;
+    background-color: #F2F4F7;
+border-radius: 100px;
+padding: 12px 18px;
+width: 187px;
+height: 44px;
+color: black;
+font-weight: 500;
+font-size: 16px;
+line-height: 125%;
+text-align: center;
 gap: 6px;
 font-size: 14px;
 line-height: 100%;
@@ -123,7 +139,16 @@ width: 156px;
 height: 34px;
 padding: 9px 14px;
     
+
   }
+      @media screen and (min-width: 1440px) {
+padding: 12px 18px;
+width: 187px;
+height: 44px;
+font-size: 16px;
+line-height: 125%;
+gap: 8px;
+ }
 
   
 `;
@@ -140,14 +165,26 @@ line-height: 125%;
 text-align: center;
 gap: 8px;
 display: flex;
-@media screen {min-width: 834px and (max-width: 1439px);
-/* gap: 6px;
+@media screen and (min-width: 834px) and (max-width: 1439px){
+/* gap: 8px;
 font-size: 14px;
 line-height: 100%;
-width: 102px;
+width: 106px;
 height: 34px;
 padding: 9px 14px; */
-  display: none;
+display: none;
+
+    
+  }
+ @media screen and (min-width: 1440px) {
+
+padding: 12px 18px;
+width: 120px;
+height: 44px;
+font-size: 16px;
+line-height: 125%;
+gap: 8px;
+display: flex;
     
   }
 
@@ -166,7 +203,7 @@ line-height: 125%;
 text-align: center;
 gap: 8px;
 display: flex;
-@media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
 gap: 6px;
 font-size: 14px;
 line-height: 100%;
@@ -190,15 +227,18 @@ line-height: 125%;
 text-align: center;
 gap: 8px;
 display: flex;
-@media screen {min-width: 834px and (max-width: 1439px);
-/* gap: 6px;
-font-size: 14px;
-line-height: 100%;
-width: 88px;
-height: 34px;
-padding: 9px 14px; */
+  @media screen and (min-width: 834px) and (max-width: 1439px){
     display: none;
   }
+    @media screen and (min-width: 1440px) {
+padding: 12px 18px;
+width: 108px;
+height: 44px;
+font-size: 16px;
+line-height: 125%;
+gap: 8px;
+display: flex;
+ }
   
 `;
 export const Adults = styled.div`
@@ -214,15 +254,21 @@ line-height: 125%;
 text-align: center;
 gap: 8px;
 display: flex;
-@media screen {min-width: 834px and (max-width: 1439px);
+ @media screen and (min-width: 834px) and (max-width: 1439px){
 gap: 6px;
 font-size: 14px;
 line-height: 100%;
 width: 100px;
 height: 34px;
-padding: 9px 14px;
-    
+padding: 9px 14px;   
   }
+   @media screen and (min-width: 1440px) {
+width: 126px;
+height: 44px;
+font-size: 16px;
+line-height: 125%;
+gap: 8px;
+ }
 `;
 export const Automatic = styled.div`
 background-color: #F2F4F7;
@@ -237,7 +283,7 @@ line-height: 125%;
 text-align: center;
 gap: 8px;
 display: flex;
-@media screen {min-width: 834px and (max-width: 1439px);
+  @media screen and (min-width: 834px) and (max-width: 1439px){
 gap: 6px;
 font-size: 14px;
 line-height: 100%;
