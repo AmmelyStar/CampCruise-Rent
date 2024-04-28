@@ -204,6 +204,8 @@ export const Button = styled.button`
   height: 56px;
   padding: 16px 60px;
   font-size: 16px;
+    margin: 0;
+
   }
   &:hover {
     background: rgb(216, 67, 67);
