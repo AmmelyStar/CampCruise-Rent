@@ -222,13 +222,7 @@ font-size: 18px;
 line-height: 100%;
 
   }
-   @media screen and (min-width: 1440px) {
-
-font-size: 24px;
-line-height: 125%;
-
-  max-width: 360px;
-  }
+ 
 
 `;
 
