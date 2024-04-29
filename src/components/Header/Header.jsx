@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   HeaderContainer,
   Navigation,
@@ -17,9 +17,23 @@ import menu from '../../img/menu.svg';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    const body = document.body;
+    if (isOpen) {
+       body.style.overflow = 'hidden';
+    }
+    else {
+    body.style.overflow = '';
+    }  return () => {
+      body.style.overflow = '';
+  };
+}, [isOpen]);
+
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
 
   return (
     <Container>
