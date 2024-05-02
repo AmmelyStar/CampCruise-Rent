@@ -53,7 +53,7 @@ color: ${theme.colors.white};
 background-color: ${theme.colors.red};
  
     opacity: 0.8;
-  text-align: center;
+  /* text-align: center; */
   display: flex;
   justify-content: center;
   margin: 0 auto;
