@@ -29,7 +29,13 @@ padding: 17px;
 width: 335px;
 max-height: 80vh;
 overflow-y: auto;
- @media screen and (min-width: 1440px)  {
+ @media screen and (min-width: 834px)and (max-width: 1439px){
+width: 786px;
+max-height: 80vh;
+overflow-y: auto;
+padding: 24px;
+  }
+ @media screen and (min-width: 1440px){
  margin-top: 50px;
   background-color: white;
    border-radius: 20px;
@@ -176,7 +182,7 @@ object-position: center;
   width: 290px;
 height: 210px;
    @media screen and (min-width: 834px) and (max-width: 1439px){
-    width: 290px;
+    width: 240px;
     height: 210px;
     flex-direction: row;
 
@@ -272,7 +278,11 @@ gap: 8px ;
 margin: 0 auto;
 height: 280px;
 width: 300px;  
- @media screen and (min-width: 1440px)  {
+ @media screen and (min-width: 834px)  {
+  width: 300px;
+  height: 160px;
+  }
+   @media screen and (min-width: 1440px)  {
   gap: 8px ;
 margin: 0 auto;
 height: 200px;
@@ -287,8 +297,12 @@ export const FeaturesContainer = styled.div`
 display: flex;
 flex-direction: column;
  justify-content: space-between;
-
 gap: 30px;
+ @media screen and (min-width: 834px)  {
+ justify-content: space-between;
+gap: 40px;
+flex-direction: row;
+  }
    @media screen and (min-width: 1440px)  {
  justify-content: space-between;
 gap: 40px;
@@ -314,6 +328,10 @@ export const ContainerReviews = styled.div`
 display: flex;
 flex-direction: column;
 gap: 10px;
+  @media screen and (min-width: 834px)  {
+gap: 18px;
+flex-direction: row;
+  }
   @media screen and (min-width: 1440px)  {
 gap: 28px;
 flex-direction: row;
@@ -371,6 +389,10 @@ width: 300px;
 margin-bottom: 24px;
 font-family: "ABeeZee", sans-serif;
 text-align: start;
+ @media screen and (min-width: 834px)  {
+ width: 340px;
+
+  }
  @media screen and (min-width: 1440px)  {
 width: 430px;
 
@@ -381,6 +403,10 @@ export const   ListReviews = styled.ul`
 width: 300px;
 padding: 0;
 margin: 0;
+  @media screen and (min-width: 834px)  {
+ width: 340px;
+
+  }
   @media screen and (min-width: 1440px)  {
  width: 430px;
 

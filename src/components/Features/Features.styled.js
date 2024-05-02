@@ -44,7 +44,7 @@ display: flex;
 gap: 6px;
 font-size: 14px;
 line-height: 100%;
-width: 77px;
+width: 90px;
 height: 34px;
 padding: 8px 14px;
     
@@ -209,7 +209,7 @@ font-size: 14px;
 line-height: 100%;
 width: 77px;
 height: 34px;
-padding: 8px 14px;
+padding: 10px 14px;
     
   }
   
@@ -287,11 +287,12 @@ display: flex;
 gap: 6px;
 font-size: 14px;
 line-height: 100%;
-width: 77px;
+width: 120px;
 height: 34px;
 padding: 8px 14px;
     
   }
+  
 
   
 `;

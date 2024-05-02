@@ -9,9 +9,22 @@ border: 1px solid rgba(16, 24, 40, 0.2);
 border-radius: 10px;
 padding: 22px;
 width: 300px;
-/* min-height: 532px; */
 background-color: white;
 text-align: start;
+
+   @media screen and (min-width: 834px)  {
+padding: 24px;
+width: 360px;
+min-height: 532px;
+flex-direction: column;
+  }
+
+   @media screen and (min-width: 1440px)  {
+padding: 24px;
+width: 448px;
+min-height: 532px;
+flex-direction: column;
+  }
  & .react-datepicker__header {
     background: white;
     border-bottom: 0;
@@ -40,9 +53,6 @@ width: 325px;
     justify-content: space-between;
     display: flex;
 }
-
-
-
   .react-datepicker__current-month, 
   .react-datepicker-time__header, 
   .react-datepicker-year-header {
@@ -65,10 +75,7 @@ top: 20px;
 .react-datepicker__navigation-icon::before{
   border-color: black;
    border-radius: 12%;
-
-
 }
-
 .react-datepicker__day-names {
     font-weight: 600;
 font-size: 12px;
@@ -85,18 +92,6 @@ justify-content: space-between;
 .react-datepicker__time-name {
      color: ${theme.colors.gray}; 
 }
-
-   @media screen and (min-width: 1440px)  {
-padding: 24px;
-width: 448px;
-min-height: 532px;
-flex-direction: column;
-  }
-
-
-
-
-
 
 `;
 
@@ -137,6 +132,9 @@ line-height: 125%;
  border: none;
  outline: none;
  resize: vertical;
+  @media screen and (min-width: 834px)  {
+      width: 310px;
+  }
     @media screen and (min-width: 1440px)  {
       width: 400px;
 height: ${props => (props.large ? '114px' : '56px')};
@@ -184,6 +182,10 @@ line-height: 125%;
  border: none;
  outline: none;
  resize: vertical;
+   @media screen and (min-width: 834px)  {
+width: 310px;
+  }
+    
     @media screen and (min-width: 1440px)  {
 padding: 18px;
 width: 400px;
