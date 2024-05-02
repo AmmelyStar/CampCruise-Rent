@@ -20,7 +20,7 @@ import {
 const StyledDatePicker = styled(DatePicker)`
   border-radius: 10px;
   padding: 18px;
-  width: 400px;
+  width: 254px;
   height: 56px;
   background: ${theme.colors.white};
   margin-bottom: 14px;
@@ -33,6 +33,10 @@ const StyledDatePicker = styled(DatePicker)`
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: right 20px center;
+  @media screen and (min-width: 1440px) {
+    width: 400px;
+    height: 56px;
+  }
 
   &::placeholder {
     color: rgba(16, 24, 40, 0.2);
@@ -49,8 +53,6 @@ const StyledDatePicker = styled(DatePicker)`
   &:active {
     border: none;
   }
-
-
 
   & .react-datepicker-wrapper {
     & .react-datepicker__input-container {
@@ -75,8 +77,6 @@ const BookForm = () => {
     if (Object.keys(errors).length === 0) {
       setSubmitted(true);
       toast.success('Form sent successfully!');
-      // Here you would typically submit the form data to your backend
-      // Reset form fields
       setName('');
       setEmail('');
       setBookingDate(null);
@@ -104,13 +104,6 @@ const BookForm = () => {
     return errors;
   };
 
-//  const filterDate = date => {
-//    const currentDate = new Date();
-//    const selectedDate = new Date(date);
-//    return (
-//      selectedDate >= currentDate || date.getDate() === currentDate.getDate()
-//    );
-  //  };
   
   const filterDate = date => {
     const currentDate = new Date();

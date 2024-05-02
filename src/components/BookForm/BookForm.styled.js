@@ -7,10 +7,9 @@ display: flex;
 flex-direction: column;
 border: 1px solid rgba(16, 24, 40, 0.2);
 border-radius: 10px;
-padding: 24px;
-padding: 24px;
-width: 448px;
-min-height: 532px;
+padding: 22px;
+width: 300px;
+/* min-height: 532px; */
 background-color: white;
 text-align: start;
  & .react-datepicker__header {
@@ -87,6 +86,15 @@ justify-content: space-between;
      color: ${theme.colors.gray}; 
 }
 
+   @media screen and (min-width: 1440px)  {
+padding: 24px;
+width: 448px;
+min-height: 532px;
+flex-direction: column;
+  }
+
+
+
 
 
 
@@ -98,6 +106,7 @@ font-size: 20px;
 line-height: 120%;
 margin-bottom: 8px;
 text-align: start;
+
 `;
 
 export const SubTitle = styled.h4`
@@ -105,15 +114,20 @@ font-weight: 400;
 font-size: 16px;
 line-height: 150%;
 color: rgba(16, 24, 40, 0.2);
-margin-bottom: 24px;
+margin-bottom: 8px;
+margin-top: 8px;
 color: #475467;
 text-align: start;
+  @media screen and (min-width: 1440px)  {
+margin-bottom: 24px;
+
+  }
 `;
 
 export const InputComment = styled.textarea`
 border-radius: 10px;
 padding: 18px;
-width: 400px;
+  width: 254px;
 height: ${props => (props.large ? '114px' : '56px')};
 margin-bottom: ${props => (props.last ? '24px' : '14px')};
 background: ${theme.colors.white};
@@ -123,6 +137,12 @@ line-height: 125%;
  border: none;
  outline: none;
  resize: vertical;
+    @media screen and (min-width: 1440px)  {
+      width: 400px;
+height: ${props => (props.large ? '114px' : '56px')};
+margin-bottom: ${props => (props.last ? '24px' : '14px')};
+
+  }
  &::placeholder {
     color: rgba(16, 24, 40, 0.2);
   }
@@ -154,7 +174,7 @@ line-height: 125%;
 export const Input = styled.input`
 border-radius: 10px;
 padding: 18px;
-width: 400px;
+  width: 254px;
 height: ${props => (props.large ? '114px' : '56px')};
 margin-bottom: ${props => (props.last ? '24px' : '14px')};
 background: ${theme.colors.white};
@@ -164,6 +184,12 @@ line-height: 125%;
  border: none;
  outline: none;
  resize: vertical;
+    @media screen and (min-width: 1440px)  {
+padding: 18px;
+width: 400px;
+height: ${props => (props.large ? '114px' : '56px')};
+margin-bottom: ${props => (props.last ? '24px' : '14px')};
+  }
  &::placeholder {
     color: rgba(16, 24, 40, 0.2);
   }

@@ -22,6 +22,14 @@ export const Box = styled.div`
 `;
 
 export const ModalContent = styled.div`
+ margin-top: 30px;
+background-color: white;
+border-radius: 20px;
+padding: 17px;
+width: 335px;
+max-height: 80vh;
+overflow-y: auto;
+ @media screen and (min-width: 1440px)  {
  margin-top: 50px;
   background-color: white;
    border-radius: 20px;
@@ -29,15 +37,55 @@ padding: 40px;
 width: 982px;
 max-height: 80vh;
 overflow-y: auto;
+padding: 24px;
+  }
+`;
+
+export const Title = styled.div`
+display: flex;
+justify-content: space-between;
+margin-top: 8px;
+margin-bottom: 4px;
+gap: 10px;
+text-align: center;
+  @media screen and (min-width: 834px) and (max-width: 1439px){
+text-align:start;
+flex-direction: column;
+    margin-top: 0;
+flex-direction: row;
+gap: 0;
+margin-bottom: 6px;
+flex-direction: row;
+    
+  }
+   @media screen and (min-width: 1440px){
+ flex-direction: column;
+margin-bottom: 8px;
+flex-direction: row;
+justify-content: space-between;
+margin-top: 10px;
+margin-bottom: 12px;
+gap: 10px;
+text-align: center;
+    
+  }
 `;
 
 export const CloseButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 12px;
   color: #333;
-  margin-top: 10px;
+  margin-top: 0;
+   width: 20px;
+
+ 
+   @media screen and (min-width: 1440px)  {
+  font-size: 16px;
+
+      width: 40px;
+  }
 `;
 
 export const Description = styled.div`
@@ -56,18 +104,27 @@ line-height: 150%;
 `;
 
 export const Price = styled.div`
+margin-bottom: 10px;
+font-weight: 600;
+font-size: 20px;
+line-height: 125%;
+color: ${theme.colors.dark};
+   @media screen and (min-width: 1440px)  {
 margin-bottom: 24px;
 font-weight: 600;
 font-size: 24px;
 line-height: 125%;
-color: ${theme.colors.dark};
+  }
 `;
 
 export const StarsLocation = styled.div`
 display: flex;
-margin-bottom: 16px;
-
+margin-bottom: 10px;
 gap: 16px;
+   @media screen and (min-width: 1440px)  {
+  margin-bottom: 16px;
+gap: 16px;
+  }
 
 `;
 
@@ -75,11 +132,13 @@ export const ReviewsSection = styled.a`
 font-weight: 600;
 font-size: 20px;
 line-height: 120%;
-
-   cursor: pointer;
+text-decoration: none;
+ cursor: pointer;
 color: ${theme.colors.black};
   position: relative;
   &:hover {
+          text-decoration: none;
+ color: ${theme.colors.black};
     &::before {
       content: '';
       position: absolute;
@@ -90,7 +149,10 @@ color: ${theme.colors.black};
       background-color: ${theme.colors.red}; 
     }
   }
-   &.active::before  {
+   &.active::before,
+   &:focus::before  {
+          text-decoration: none;
+ color: ${theme.colors.black};
     content: '';
     position: absolute;
     left: 0;
@@ -101,14 +163,55 @@ color: ${theme.colors.black};
   }
 `;
 
+export const Image = styled.div`
+ display: flex;
+      flex-direction: column;
+
+    img {
+      display: flex;
+      flex-direction: column;
+object-fit:cover;
+object-position: center;
+    border-radius: 10px;
+  width: 290px;
+height: 210px;
+   @media screen and (min-width: 834px) and (max-width: 1439px){
+    width: 290px;
+    height: 210px;
+    flex-direction: row;
+
+  } 
+    @media screen and (min-width: 1440px){
+    width: 290px;
+    height: 310px;
+      flex-direction: row; 
+  } 
+
+   }
+  display: flex;
+  gap: 16px;
+  @media screen and (min-width: 834px){
+     gap: 10px;
+   flex-direction: row; 
+  } 
+    @media screen and (min-width: 1440px) {
+     gap: 10px;
+   flex-direction: row; 
+  } 
+
+`;
+
 export const Features = styled.a`
 font-weight: 600;
 font-size: 20px;
 line-height: 120%;
+text-decoration: none;
  color: ${theme.colors.black};
     cursor: pointer;
   position: relative;
   &:hover {
+    text-decoration: none;
+ color: ${theme.colors.black};
     &::before {
       content: '';
       position: absolute;
@@ -122,6 +225,8 @@ line-height: 120%;
   }
 
     &.active::before  {
+      text-decoration: none;
+ color: ${theme.colors.black};
     content: '';
     position: absolute;
     left: 0;
@@ -165,16 +270,30 @@ display: flex;
 flex-wrap: wrap;
 gap: 8px ;
 margin: 0 auto;
+height: 280px;
+width: 300px;  
+ @media screen and (min-width: 1440px)  {
+  gap: 8px ;
+margin: 0 auto;
 height: 200px;
-width: 400px;
+width: 400px; 
+
+  }
 
 
 `;
 
 export const FeaturesContainer = styled.div`
 display: flex;
-justify-content: space-between;
+flex-direction: column;
+ justify-content: space-between;
+
 gap: 30px;
+   @media screen and (min-width: 1440px)  {
+ justify-content: space-between;
+gap: 40px;
+flex-direction: row;
+  }
 
 
 
@@ -193,7 +312,14 @@ padding: 40px;
 
 export const ContainerReviews = styled.div`
 display: flex;
+flex-direction: column;
 gap: 10px;
+  @media screen and (min-width: 1440px)  {
+gap: 28px;
+flex-direction: row;
+
+  }
+
 
 `;
 
@@ -241,14 +367,24 @@ font-weight: 400;
 font-size: 16px;
 line-height: 150%;
 color: #475467;
-width: 430px;
+width: 300px;
 margin-bottom: 24px;
 font-family: "ABeeZee", sans-serif;
 text-align: start;
+ @media screen and (min-width: 1440px)  {
+width: 430px;
+
+  }
 `;
 
 export const   ListReviews = styled.ul`
-width: 430px;
+width: 300px;
+padding: 0;
+margin: 0;
+  @media screen and (min-width: 1440px)  {
+ width: 430px;
+
+  }
 `;
 
 export const FeaturesDetails = styled.div`

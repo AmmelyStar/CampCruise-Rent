@@ -59,6 +59,8 @@ import {
   HeightDetails,
   Tank,
   Consumption,
+  Title,
+  Image,
 } from './ModalComponent.styled';
 
 import {
@@ -70,8 +72,8 @@ import {
   Location,
   ImgLocation,
   BoxLocation,
-  Image,
-  Title,
+
+
 } from '../CardItem/CardItemStyle';
 
 const CustomModal = ({ isOpen, onClose, advert }) => {
