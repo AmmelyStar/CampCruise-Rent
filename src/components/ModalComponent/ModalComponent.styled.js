@@ -308,9 +308,6 @@ flex-direction: row;
 gap: 40px;
 flex-direction: row;
   }
-
-
-
 `;
 
 
@@ -335,10 +332,7 @@ flex-direction: row;
   @media screen and (min-width: 1440px)  {
 gap: 28px;
 flex-direction: row;
-
   }
-
-
 `;
 
 
@@ -355,16 +349,11 @@ justify-content: center;
 text-align: center;
 padding: 15px;
 margin-bottom: 16px;
-
-
 `;
 
 export const AvaName = styled.div`
 display: flex;
 gap: 16px;
-
-
-
 `;
 
 export const Stars = styled.div`
@@ -376,8 +365,6 @@ flex-direction: column;
 justify-content: center;
 gap: 4px;
 width: 200px;
-
-
 `;
 
 export const TextReviews = styled.li`
