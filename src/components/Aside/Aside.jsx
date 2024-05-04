@@ -10,22 +10,46 @@ import {
   RadioWrap,
   BtnVisibl,
   TabDesk,
+  Select,
 } from './Aside.styled';
 import svg from '../../img/icons.svg';
 import React, { useState } from 'react';
 import down from '../../img/down.svg'
-const AsideFilter = () => {
+
+
+
+
+
+const Aside = ({ cities, onCityChange }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [selectedCity, setSelectedCity] = useState('');
 
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
   };
+
+    const handleCityChange = e => {
+      const city = e.target.value;
+      setSelectedCity(city);
+      onCityChange(city);
+  };
+  
+
   return (
     <>
       <AsideContainer>
         <FormLocation>
           <label>Location</label>
-          <input></input>
+            <Select onChange={handleCityChange} value={selectedCity}>
+              <option value="">All cities</option>
+              {cities.map((city, index) => (
+                <option key={index} value={city}>
+                  {city}
+                </option>
+              ))}
+            </Select>
+          
+
           <svg>
             <use href={`${svg}#icon-map-pin`}></use>
           </svg>
@@ -215,4 +239,4 @@ const AsideFilter = () => {
   );
 };
 
-export default AsideFilter;
+export default Aside;

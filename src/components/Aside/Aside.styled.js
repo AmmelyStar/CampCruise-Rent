@@ -384,3 +384,38 @@ export const RadioWrap = styled.div`
   }
   }
 `;
+
+
+
+  export const Select = styled.select`
+  border-radius: 10px;
+  padding: 18px 218px 18px 18px;
+  width: 356px;
+  height: 56px;
+
+   background: rgb(247, 247, 247);
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+font-size: 16px;
+line-height: 125%;
+  cursor: pointer;
+
+  option {
+    background-color: #fff;
+    color: #333;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+
+  @media screen and (min-width: 834px) {
+    width: 230px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 356px;
+  }
+`;
