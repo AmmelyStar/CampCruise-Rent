@@ -100,7 +100,7 @@ height: 40px;
     stroke: #101828;
     position: absolute;
     z-index: 1;
-    top: 40px;
+    top: 50px;
     left: 18px;
      @media screen and (min-width: 834px) {
 width: 18px;
@@ -109,7 +109,7 @@ width: 18px;
     stroke: #101828;
     position: absolute;
     z-index: 1;
-    top: 34px;
+    top: 43px;
     left: 18px;
   }
     @media screen and (min-width: 1440px) {
@@ -119,7 +119,7 @@ width: 18px;
     stroke: #101828;
     position: absolute;
     z-index: 1;
-    top: 40px;
+    top: 50px;
     left: 18px;
   }
   }
@@ -389,21 +389,32 @@ export const RadioWrap = styled.div`
 
   export const Select = styled.select`
   border-radius: 10px;
-  padding: 18px 218px 18px 18px;
-  width: 356px;
+  padding: 18px 18px 18px 42px;
+  width: 256px;
   height: 56px;
-
    background: rgb(247, 247, 247);
-  font-size: 16px;
-  color: #333;
-  font-weight: 400;
-font-size: 16px;
-line-height: 125%;
+  font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+ -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+   border: none;
   cursor: pointer;
-
   option {
-    background-color: #fff;
     color: #333;
+    border-radius: 10px;
+    background: rgb(247, 247, 247);
+    border: none;
+    padding: 18px 18px 18px 44px;
+    width: 200px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    appearance: none;
+
   }
 
   &:focus {
@@ -412,10 +423,11 @@ line-height: 125%;
   }
 
   @media screen and (min-width: 834px) {
-    width: 230px;
+    width: 190px;
   }
 
   @media screen and (min-width: 1440px) {
     width: 356px;
+        font-size: 20px;
   }
 `;
