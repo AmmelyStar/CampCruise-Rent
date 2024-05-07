@@ -49,17 +49,17 @@ function Header() {
         <Navigation>
           <ul>
             <li>
-              <NavLink to="/Home" activeClassName="active">
+              <NavLink to="/Home" activeclassname="active">
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Catalog" activeClassName="active">
+              <NavLink to="/Catalog" activeclassname="active">
                 Catalog
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Favorites" activeClassName="active">
+              <NavLink to="/Favorites" activeclassname="active">
                 Favorites
               </NavLink>
             </li>

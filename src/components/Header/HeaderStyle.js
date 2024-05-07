@@ -11,7 +11,7 @@ export const HeaderContainer = styled.div`
   font-size: 24px;
   display: flex;
   justify-content: space-between;
-  visibility: ${props => (props.isHidden ? 'hidden' : 'visible')}; // змінено тут
+  visibility: ${props => (props.isHidden ? 'hidden' : 'visible')}; 
 
 `;
 
