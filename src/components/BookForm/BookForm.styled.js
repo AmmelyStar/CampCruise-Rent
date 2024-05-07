@@ -212,14 +212,13 @@ margin-bottom: ${props => (props.last ? '24px' : '14px')};
 
 export const Button = styled.button`
 border-radius: 200px;
-padding: 16px 60px;
 width: 160px;
 height: 56px;
 font-weight: 500;
 font-size: 16px;
 line-height: 150%;
 letter-spacing: -0.01em;
-
+text-align: center;
  background-color: ${theme.colors.red};
  color: ${theme.colors.white};
   &:hover,

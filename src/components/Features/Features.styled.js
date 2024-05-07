@@ -15,7 +15,7 @@ line-height: 125%;
 text-align: center;
 gap: 8px;
 display: flex;
-  @media screen and (min-width: 834px) and (max-width: 1439px){
+  @media screen and (min-width: 834px) {
 gap: 6px;
 font-size: 14px;
 line-height: 100%;
@@ -40,7 +40,7 @@ line-height: 125%;
 text-align: center;
 gap: 8px;
 display: flex;
-@media screen {min-width: 834px and (max-width: 1439px);
+ @media screen and (min-width: 834px) {
 gap: 6px;
 font-size: 14px;
 line-height: 100%;
@@ -194,7 +194,7 @@ export const CD = styled.div`
 background-color: #F2F4F7;
 border-radius: 100px;
 padding: 12px 14px;
-width: 120px;
+width: 100px;
 height: 44px;
 color: black;
 font-weight: 500;
