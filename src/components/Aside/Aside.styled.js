@@ -14,8 +14,9 @@ export const AsideContainer = styled.aside`
 `;
 
 export const BtnVisibl = styled.button`
+ display: none;
  display: flex;
-   background: none;
+   /* background: none;
   img {
     margin-left: 8px;
     margin-top: 3px;
@@ -29,15 +30,15 @@ export const BtnVisibl = styled.button`
 
   @media screen and (min-width: 833px) {
   display: none;
-  }
+  } */
 `;
 
 export const TabDesk = styled.div`
  display: none;
-   @media screen and (min-width: 833px) {
+   /* @media screen and (min-width: 833px) {
   display: flex;
   flex-direction: column;
-  }
+  } */
 `;
 
 
@@ -126,7 +127,8 @@ width: 18px;
 `;
 
 export const TitlePage = styled.h5`
-  color: rgb(71, 84, 103);
+ display: none;
+  /* color: rgb(71, 84, 103);
   font-family: Inter;
   font-size: 16px;
   font-weight: 500;
@@ -146,19 +148,20 @@ margin-left: 100px;
       font-size: 18px;
          text-align: left;
          margin-left: 0;
-  }
+  } */
 `;
 export const TitleList = styled.h6`
-  color: rgb(16, 24, 40);
+ display: none;
+  /* color: rgb(16, 24, 40);
   font-family: Inter;
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0%;
-  text-align: center;
-  margin-bottom: 24px;
+  text-align: center; */
+  /* margin-bottom: 24px; */
 
-  @media screen and (min-width: 834px) and (max-width: 1439px){
+  /* @media screen and (min-width: 834px) and (max-width: 1439px){
       font-size: 18px;
         line-height: 18px;
           text-align: start;
@@ -172,7 +175,7 @@ export const TitleList = styled.h6`
      text-align: start;
          margin-bottom: 10px;
           margin-top: 10px;
-  }
+  } */
 `;
 export const Button = styled.button`
   width: 173px;

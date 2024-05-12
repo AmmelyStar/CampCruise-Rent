@@ -14,7 +14,7 @@ import {
 } from './Aside.styled';
 import svg from '../../img/icons.svg';
 import React, { useState } from 'react';
-import down from '../../img/down.svg'
+// import down from '../../img/down.svg'
 
 
 
@@ -57,12 +57,12 @@ const Aside = ({ cities, onCityChange }) => {
 
         <BtnVisibl onClick={toggleVisibility}>
           <TitlePage>Filters</TitlePage>
-          <img
+          {/* <img
             src={down}
             alt=""
             width={22}
             className={isVisible ? 'rotated' : ''}
-          />
+          /> */}
         </BtnVisibl>
         {isVisible && (
           <>
