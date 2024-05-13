@@ -48,8 +48,6 @@ const Aside = ({ cities, onCityChange }) => {
                 </option>
               ))}
             </Select>
-          
-
           <svg>
             <use href={`${svg}#icon-map-pin`}></use>
           </svg>

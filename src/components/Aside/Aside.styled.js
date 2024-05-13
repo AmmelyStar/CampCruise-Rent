@@ -58,8 +58,6 @@ text-align: start;
   margin-bottom: 32px;
   }
 
-  
-
   label {
     color: rgba(16, 24, 40, 0.6);
     font-family: Inter;
@@ -387,8 +385,6 @@ export const RadioWrap = styled.div`
   }
   }
 `;
-
-
 
   export const Select = styled.select`
   border-radius: 10px;
