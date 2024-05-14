@@ -52,7 +52,6 @@ const Aside = ({ cities, onCityChange }) => {
             <use href={`${svg}#icon-map-pin`}></use>
           </svg>
         </FormLocation>
-
         <BtnVisibl onClick={toggleVisibility}>
           <TitlePage>Filters</TitlePage>
           {/* <img
